@@ -1,0 +1,551 @@
+/*************************************************************************************/
+
+//                                                                                     
+
+// Description: LIN Description file created using VDE						            
+
+// Created:     04/22/2025 09:25:23
+
+// Author:      VDE
+
+//                                                                                     
+
+/*************************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: CDCU, 10 ms, 0.1 ms ;
+  Slaves: ALC, ALP ;
+}
+
+Signals {
+  ALC_ResponseError: 1, 0, ALC, CDCU;//通信响应状态位
+  ALC_Error_Open: 1, 0, ALC, CDCU;//点、线光源开路故障
+  ALC_Error_Short: 1, 0, ALC, CDCU;//点、线光源短路故障
+  ALC_Error_High: 1, 0, ALC, CDCU;//输入电压高故障
+  ALC_Error_Low: 1, 0, ALC, CDCU;//输入电压过低故障
+  ALC_Error_Reverse: 1, 0, ALC, CDCU;//输入电压反向故障
+  ALC_01ZoneSelt: 1, 0, ALC, CDCU;//仪表区域
+  ALC_02ZoneSelt: 1, 0, ALC, CDCU;//中控区域
+  ALC_03ZoneSelt: 1, 0, ALC, CDCU;//前门区域
+  ALC_04ZoneSelt: 1, 0, ALC, CDCU;//后门区域
+  ALC_05ZoneSelt: 1, 0, ALC, CDCU;//车顶区域
+  ALC_06ZoneSelt: 1, 0, ALC, CDCU;//预留卧铺区域
+  ALC_07ZoneSelt: 1, 0, ALC, CDCU;//预留
+  ALC_08ZoneSelt: 1, 0, ALC, CDCU;//预留
+  ALC_09ZoneSelt: 1, 0, ALC, CDCU;//预留
+  ALC_10ZoneSelt: 1, 0, ALC, CDCU;//预留
+  AmbLigBri: 7, 0, ALC, CDCU;//氛围灯亮度值
+  ALC_01Zone: 1, 0, CDCU, ALC;//仪表区域
+  ALC_02Zone: 1, 0, CDCU, ALC;//中控区域
+  ALC_03Zone: 1, 0, CDCU, ALC;//前门区域
+  ALC_04Zone: 1, 0, CDCU, ALC;//后门区域
+  ALC_05Zone: 1, 0, CDCU, ALC;//车顶区域
+  ALC_06Zone: 1, 0, CDCU, ALC;//预留卧铺区域
+  ALC_07Zone: 1, 0, CDCU, ALC;//预留
+  ALC_08Zone: 1, 0, CDCU, ALC;//预留
+  ALC_09Zone: 1, 0, CDCU, ALC;//预留
+  ALC_10Zone: 1, 0, CDCU, ALC;//预留
+  ALCLigBriAdj: 7, 0, CDCU, ALC;//氛围灯亮度目标值
+  ALCLigColorAdj: 8, 0, CDCU, ALC;//氛围灯颜色
+  ALCLigFadeINorOUTStepTi: 7, 0, CDCU, ALC;//时长信号
+  ALCLigFlngModSel: 6, 0, CDCU, ALC;//氛围灯模式指令
+  DymALCLigLevelSig: 7, 0, CDCU, ALC;//尺度信号（控制点亮长度（尺度）
+  DymALCLigDirSig: 3, 0, CDCU, ALC;//动态氛围灯渐亮\渐灭\颜色切换方向信号/动态面板设定位置信号
+  ALCModLocSig: 3, 0, CDCU, ALC;//氛围灯模组方位使能（左、右、中、顶部）信号
+  ALCLigModRepOrdIdeSig: 1, 0, CDCU, ALC;//重复指令识别信号
+  ALCLigModTimCabSig: 1, 0, CDCU, ALC, ALP;//时间校准信号（用于动态面板执行长时动态效果，避免自计时误差引起的整车效果不一直（外部晶振计时），在整车动态面板执行长时动态效果时，按照动态效果周期时间的倍数设置固定间隔周期循环发送本信号，相关节点信号赋值1，模式信号赋值当前执行模式信号，其它信号信号赋值0，时间校准信号赋值0~1循环发送，氛围灯模组每接收到一次变化的时间校准信号，动态效果同时重新启动一次
+  ALP_ResponseError: 1, 0, ALP, CDCU;//通信响应状态位
+  ALP_Error_Open: 1, 0, ALP, CDCU;//点、线光源开路故障
+  ALP_Error_Short: 1, 0, ALP, CDCU;//点、线光源短路故障
+  ALP_Error_High: 1, 0, ALP, CDCU;//输入电压高故障
+  ALP_Error_Low: 1, 0, ALP, CDCU;//输入电压过低故障
+  ALP_Error_Reverse: 1, 0, ALP, CDCU;//输入电压反向故障
+  ALP_01Selt: 1, 0, ALP, CDCU;//发光面板
+  ALPLigBri: 7, 0, ALP, CDCU;//发光面板亮度值
+  ALP_Zone: 1, 0, CDCU, ALP;//发光面板
+  ALPLigBriAdj: 7, 0, CDCU, ALP;//发光面板亮度目标值
+  ALPLigColorAdj: 8, 0, CDCU, ALP;//发光面板颜色
+  ALPLigFadeINorOUTStepTi: 7, 0, CDCU, ALP;//时长信号
+  ALPLigFlngModSel: 6, 0, CDCU, ALP;//发光面板模式指令
+  DymALPLigLevelSig: 7, 0, CDCU, ALP;//尺度信号（控制点亮长度（尺度）
+  DymALPLigDirSig: 3, 0, CDCU, ALP;//动态发光面板渐亮\渐灭\颜色切换方向信号/动态面板设定位置信号
+  ALPModLocSig: 3, 0, CDCU, ALP;//发光面板模组方位使能（左、右、中、顶部）信号
+  ALPLigModRepOrdIdeSig: 1, 0, CDCU, ALP;//重复指令识别信号
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+Frames {
+  ALC_1: 0x2E, ALC, 8 {
+    ALC_ResponseError, 0 ;
+    ALC_Error_Open, 1 ;
+    ALC_Error_Short, 2 ;
+    ALC_Error_High, 3 ;
+    ALC_Error_Low, 4 ;
+    ALC_Error_Reverse, 5 ;
+    ALC_01ZoneSelt, 6 ;
+    ALC_02ZoneSelt, 7 ;
+    ALC_03ZoneSelt, 8 ;
+    ALC_04ZoneSelt, 9 ;
+    ALC_05ZoneSelt, 10 ;
+    ALC_06ZoneSelt, 11 ;
+    ALC_07ZoneSelt, 12 ;
+    ALC_08ZoneSelt, 13 ;
+    ALC_09ZoneSelt, 14 ;
+    ALC_10ZoneSelt, 15 ;
+    AmbLigBri, 16 ;
+  }
+  CDCU_ALCCtrl: 0x36, CDCU, 8 {
+    ALC_01Zone, 0 ;
+    ALC_02Zone, 1 ;
+    ALC_03Zone, 2 ;
+    ALC_04Zone, 3 ;
+    ALC_05Zone, 4 ;
+    ALC_06Zone, 5 ;
+    ALC_07Zone, 6 ;
+    ALC_08Zone, 7 ;
+    ALC_09Zone, 8 ;
+    ALC_10Zone, 9 ;
+    ALCLigBriAdj, 16 ;
+    ALCLigColorAdj, 24 ;
+    ALCLigFadeINorOUTStepTi, 32 ;
+    ALCLigFlngModSel, 40 ;
+    DymALCLigLevelSig, 48 ;
+    DymALCLigDirSig, 56 ;
+    ALCModLocSig, 59 ;
+    ALCLigModRepOrdIdeSig, 62 ;
+    ALCLigModTimCabSig, 63 ;
+  }
+  ALPSts: 0x2F, ALP, 8 {
+    ALP_ResponseError, 0 ;
+    ALP_Error_Open, 1 ;
+    ALP_Error_Short, 2 ;
+    ALP_Error_High, 3 ;
+    ALP_Error_Low, 4 ;
+    ALP_Error_Reverse, 5 ;
+    ALP_01Selt, 6 ;
+    ALPLigBri, 16 ;
+  }
+  CDCU_ALPCtrl: 0x37, CDCU, 8 {
+    ALP_Zone, 0 ;
+    ALPLigBriAdj, 16 ;
+    ALPLigColorAdj, 24 ;
+    ALPLigFadeINorOUTStepTi, 32 ;
+    ALPLigFlngModSel, 40 ;
+    DymALPLigLevelSig, 48 ;
+    DymALPLigDirSig, 56 ;
+    ALPModLocSig, 59 ;
+    ALPLigModRepOrdIdeSig, 62 ;
+  }
+}
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+Node_attributes {
+  ALC{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 46 ;
+    initial_NAD = 46 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = ALC_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ALC_1 ;
+      CDCU_ALCCtrl ;
+    }
+  }
+  ALP{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 47 ;
+    initial_NAD = 47 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = ALP_ResponseError ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      ALPSts ;
+      CDCU_ALCCtrl ;
+      CDCU_ALPCtrl ;
+    }
+  }
+}
+
+Schedule_tables {
+ Dynamic {
+    ALC_1 delay 20 ms ;
+    CDCU_ALCCtrl delay 20 ms ;
+    ALPSts delay 20 ms ;
+    CDCU_ALPCtrl delay 20 ms ;
+  }
+}
+
+Signal_encoding_types {
+  Enc_ALC_1_ALC_ResponseError {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALC_1_ALC_Error_Open {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALC_1_ALC_Error_Short {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALC_1_ALC_Error_High {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALC_1_ALC_Error_Low {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALC_1_ALC_Error_Reverse {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALC_1_ALC_01ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_02ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_03ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_04ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_05ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_06ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_07ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_08ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_09ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_ALC_10ZoneSelt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALC_1_AmbLigBri {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_01Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_02Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_03Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_04Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_05Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_06Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_07Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_08Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_09Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALC_10Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALCLigBriAdj {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  Enc_CDCU_ALCCtrl_ALCLigColorAdj {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  Enc_CDCU_ALCCtrl_ALCLigFadeINorOUTStepTi {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  Enc_CDCU_ALCCtrl_ALCLigFlngModSel {
+    physical_value, 0, 63, 1, 0 ;
+  }
+  Enc_CDCU_ALCCtrl_DymALCLigLevelSig {
+    physical_value, 0, 127, 1, 0 ;
+  }
+  Enc_CDCU_ALCCtrl_DymALCLigDirSig {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "mode1" ;
+    logical_value, 2, "mode2" ;
+    logical_value, 3, "mode3" ;
+    logical_value, 4, "mode4" ;
+    logical_value, 5, "mode5" ;
+    logical_value, 6, "mode6" ;
+    logical_value, 7, "mode7" ;
+  }
+  Enc_CDCU_ALCCtrl_ALCModLocSig {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "mode1" ;
+    logical_value, 2, "mode2" ;
+    logical_value, 3, "mode3" ;
+    logical_value, 4, "mode4" ;
+    logical_value, 5, "mode5" ;
+    logical_value, 6, "mode6" ;
+    logical_value, 7, "mode7" ;
+  }
+  Enc_CDCU_ALCCtrl_ALCLigModRepOrdIdeSig {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALCCtrl_ALCLigModTimCabSig {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALPSts_ALP_ResponseError {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALPSts_ALP_Error_Open {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALPSts_ALP_Error_Short {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALPSts_ALP_Error_High {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALPSts_ALP_Error_Low {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALPSts_ALP_Error_Reverse {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_ALPSts_ALP_01Selt {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_ALPSts_ALPLigBri {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  Enc_CDCU_ALPCtrl_ALP_Zone {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+  Enc_CDCU_ALPCtrl_ALPLigBriAdj {
+    physical_value, 0, 100, 1, 0, "%" ;
+  }
+  Enc_CDCU_ALPCtrl_ALPLigColorAdj {
+    physical_value, 0, 255, 1, 0 ;
+  }
+  Enc_CDCU_ALPCtrl_ALPLigFadeINorOUTStepTi {
+    physical_value, 0, 127, 1, 0 ;
+  }
+  Enc_CDCU_ALPCtrl_ALPLigFlngModSel {
+    physical_value, 0, 63, 1, 0 ;
+  }
+  Enc_CDCU_ALPCtrl_DymALPLigLevelSig {
+    physical_value, 0, 127, 1, 0 ;
+  }
+  Enc_CDCU_ALPCtrl_DymALPLigDirSig {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "mode1" ;
+    logical_value, 2, "mode2" ;
+    logical_value, 3, "mode3" ;
+    logical_value, 4, "mode4" ;
+    logical_value, 5, "mode5" ;
+    logical_value, 6, "mode6" ;
+    logical_value, 7, "mode7" ;
+  }
+  Enc_CDCU_ALPCtrl_ALPModLocSig {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "mode1" ;
+    logical_value, 2, "mode2" ;
+    logical_value, 3, "mode3" ;
+    logical_value, 4, "mode4" ;
+    logical_value, 5, "mode5" ;
+    logical_value, 6, "mode6" ;
+    logical_value, 7, "mode7" ;
+  }
+  Enc_CDCU_ALPCtrl_ALPLigModRepOrdIdeSig {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Active" ;
+    logical_value, 1, "Active" ;
+  }
+}
+
+Signal_representation {
+  Enc_ALC_1_ALC_ResponseError: ALC_ResponseError ;
+  Enc_ALC_1_ALC_Error_Open: ALC_Error_Open ;
+  Enc_ALC_1_ALC_Error_Short: ALC_Error_Short ;
+  Enc_ALC_1_ALC_Error_High: ALC_Error_High ;
+  Enc_ALC_1_ALC_Error_Low: ALC_Error_Low ;
+  Enc_ALC_1_ALC_Error_Reverse: ALC_Error_Reverse ;
+  Enc_ALC_1_ALC_01ZoneSelt: ALC_01ZoneSelt ;
+  Enc_ALC_1_ALC_02ZoneSelt: ALC_02ZoneSelt ;
+  Enc_ALC_1_ALC_03ZoneSelt: ALC_03ZoneSelt ;
+  Enc_ALC_1_ALC_04ZoneSelt: ALC_04ZoneSelt ;
+  Enc_ALC_1_ALC_05ZoneSelt: ALC_05ZoneSelt ;
+  Enc_ALC_1_ALC_06ZoneSelt: ALC_06ZoneSelt ;
+  Enc_ALC_1_ALC_07ZoneSelt: ALC_07ZoneSelt ;
+  Enc_ALC_1_ALC_08ZoneSelt: ALC_08ZoneSelt ;
+  Enc_ALC_1_ALC_09ZoneSelt: ALC_09ZoneSelt ;
+  Enc_ALC_1_ALC_10ZoneSelt: ALC_10ZoneSelt ;
+  Enc_ALC_1_AmbLigBri: AmbLigBri ;
+  Enc_CDCU_ALCCtrl_ALC_01Zone: ALC_01Zone ;
+  Enc_CDCU_ALCCtrl_ALC_02Zone: ALC_02Zone ;
+  Enc_CDCU_ALCCtrl_ALC_03Zone: ALC_03Zone ;
+  Enc_CDCU_ALCCtrl_ALC_04Zone: ALC_04Zone ;
+  Enc_CDCU_ALCCtrl_ALC_05Zone: ALC_05Zone ;
+  Enc_CDCU_ALCCtrl_ALC_06Zone: ALC_06Zone ;
+  Enc_CDCU_ALCCtrl_ALC_07Zone: ALC_07Zone ;
+  Enc_CDCU_ALCCtrl_ALC_08Zone: ALC_08Zone ;
+  Enc_CDCU_ALCCtrl_ALC_09Zone: ALC_09Zone ;
+  Enc_CDCU_ALCCtrl_ALC_10Zone: ALC_10Zone ;
+  Enc_CDCU_ALCCtrl_ALCLigBriAdj: ALCLigBriAdj ;
+  Enc_CDCU_ALCCtrl_ALCLigColorAdj: ALCLigColorAdj ;
+  Enc_CDCU_ALCCtrl_ALCLigFadeINorOUTStepTi: ALCLigFadeINorOUTStepTi ;
+  Enc_CDCU_ALCCtrl_ALCLigFlngModSel: ALCLigFlngModSel ;
+  Enc_CDCU_ALCCtrl_DymALCLigLevelSig: DymALCLigLevelSig ;
+  Enc_CDCU_ALCCtrl_DymALCLigDirSig: DymALCLigDirSig ;
+  Enc_CDCU_ALCCtrl_ALCModLocSig: ALCModLocSig ;
+  Enc_CDCU_ALCCtrl_ALCLigModRepOrdIdeSig: ALCLigModRepOrdIdeSig ;
+  Enc_CDCU_ALCCtrl_ALCLigModTimCabSig: ALCLigModTimCabSig ;
+  Enc_ALPSts_ALP_ResponseError: ALP_ResponseError ;
+  Enc_ALPSts_ALP_Error_Open: ALP_Error_Open ;
+  Enc_ALPSts_ALP_Error_Short: ALP_Error_Short ;
+  Enc_ALPSts_ALP_Error_High: ALP_Error_High ;
+  Enc_ALPSts_ALP_Error_Low: ALP_Error_Low ;
+  Enc_ALPSts_ALP_Error_Reverse: ALP_Error_Reverse ;
+  Enc_ALPSts_ALP_01Selt: ALP_01Selt ;
+  Enc_ALPSts_ALPLigBri: ALPLigBri ;
+  Enc_CDCU_ALPCtrl_ALP_Zone: ALP_Zone ;
+  Enc_CDCU_ALPCtrl_ALPLigBriAdj: ALPLigBriAdj ;
+  Enc_CDCU_ALPCtrl_ALPLigColorAdj: ALPLigColorAdj ;
+  Enc_CDCU_ALPCtrl_ALPLigFadeINorOUTStepTi: ALPLigFadeINorOUTStepTi ;
+  Enc_CDCU_ALPCtrl_ALPLigFlngModSel: ALPLigFlngModSel ;
+  Enc_CDCU_ALPCtrl_DymALPLigLevelSig: DymALPLigLevelSig ;
+  Enc_CDCU_ALPCtrl_DymALPLigDirSig: DymALPLigDirSig ;
+  Enc_CDCU_ALPCtrl_ALPModLocSig: ALPModLocSig ;
+  Enc_CDCU_ALPCtrl_ALPLigModRepOrdIdeSig: ALPLigModRepOrdIdeSig ;
+}
+

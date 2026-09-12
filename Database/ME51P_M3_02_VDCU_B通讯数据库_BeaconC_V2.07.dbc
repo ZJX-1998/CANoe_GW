@@ -1,0 +1,1671 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VDCU_B WCM HLCM_L HLCM_R LLCM ADB_L ADB_R EPM_D EPM_P PDM_D PDM_P VSP SWH RTA HLCM_M PSM EAC1 EAC2 HFAN2 HFAN1 HFAN3 WPTC3 WPTC1 WPTC2
+
+
+BO_ 2566892165 VWC1: 8 WCM
+ SG_ WCM1_key_status : 12|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ WCM1_charge_status : 16|3@1+ (1,0) [0|7] "" VDCU_B
+ SG_ WCM1_fault_status : 20|4@1+ (1,0) [0|15] "" VDCU_B
+ SG_ WCM1_phone_reminder : 24|1@1+ (1,0) [0|1] "" VDCU_B
+
+BO_ 2566872532 LCM_L: 8 HLCM_L
+ SG_ LCM_L_St_RunningLight : 2|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_L_St_LeftTurnLight : 14|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_L_St_TractorMarkerLight : 30|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_L_St_LampFlicker : 44|4@1+ (1,0) [0|15] "" VDCU_B
+ SG_ LCM_L_F_OverVoltage : 56|1@1+ (1,0) [0|1] "" VDCU_B
+ SG_ LCM_L_F_UnderVoltage : 57|1@1+ (1,0) [0|1] "" VDCU_B
+ SG_ LCM_L_F_RunningLight : 58|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_L_F_LeftTurnLight : 60|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_L_F_TractorMarkerLight : 62|2@1+ (1,0) [0|3] "" VDCU_B
+
+BO_ 2566872533 LCM_R: 8 HLCM_R
+ SG_ LCM_R_St_RunningLight : 2|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_R_St_RightTurnLight : 12|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_R_St_TractorMarkerLight : 30|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_R_St_LampFlicker : 44|4@1+ (1,0) [0|15] "" VDCU_B
+ SG_ LCM_R_F_OverVoltage : 56|1@1+ (1,0) [0|1] "" VDCU_B
+ SG_ LCM_R_F_UnderVoltage : 57|1@1+ (1,0) [0|1] "" VDCU_B
+ SG_ LCM_R_F_RunningLight : 58|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_R_F_LeftTurnLight : 60|2@1+ (1,0) [0|3] "" VDCU_B
+ SG_ LCM_R_F_TractorMarkerLight : 62|2@1+ (1,0) [0|3] "" VDCU_B
+
+BO_ 2566853359 VCU_4: 8 VDCU_B
+ SG_ VBUS_VCU4_N_VehicleSpeed : 0|16@1+ (0.0039,0) [0|250.996] "km/h" LLCM,ADB_L,ADB_R,EPM_D,EPM_P,PDM_D,PDM_P,VSP
+ SG_ VBUS_VCU4_N_AverageConsumedPower : 16|16@1+ (0.1,0) [0|6553.5] "kW·h/100km" Vector__XXX
+ SG_ VBUS_VCU4_St_Gears : 32|2@1+ (1,0) [0|3] "" VSP
+ SG_ VBUS_VCU4_St_Ready : 34|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_St_Vehicle : 35|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU4_St_Interlocking : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_St_ShiftGearBrkOn : 38|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_F_ShiftGears : 39|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_F_Motor : 41|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU4_F_MotorOverTemp : 43|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_St_DISCHARGE_STA : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU4_N_EVRemainDriverRange : 48|10@1+ (1,0) [0|1023] "km" Vector__XXX
+ SG_ VBUS_VCU4_St_BrakeSta : 58|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_St_Thermal_runaway : 59|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU4_RollingCounter : 60|4@1+ (1,0) [0|15] "" Vector__XXX
+
+BO_ 2566853615 VCU_5: 8 VDCU_B
+ SG_ VBUS_VCU5_N_DCVoltage : 0|16@1+ (0.1,0) [0|1000] "V" Vector__XXX
+ SG_ VBUS_VCU5_N_DCCurrent : 16|16@1+ (0.1,-1000) [-1000|1000] "A" Vector__XXX
+ SG_ VBUS_VCU5_N_SOC : 32|8@1+ (0.4,0) [0|100] "%" LLCM
+ SG_ VBUS_VCU5_St_LowSOC : 40|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_St_BatteryCHGHeating : 41|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_F_Battery : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_F_OverTemperature : 44|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_F_LVBattVoltageLow : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_St_HVDisConnect : 46|1@1+ (1,0) [0|1] "" SWH
+ SG_ VBUS_VCU5_F_Isolation : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_St_ChargerIndicator : 48|2@1+ (1,0) [0|3] "" LLCM
+ SG_ VBUS_VCU5_St_ChargerLine : 50|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ VBUS_VCU5_St_EnergyFlow : 51|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU5_St_ChargeMode : 53|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ VBUS_VCU5_St_PowerReduceOperation : 55|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2565866755 ETC2: 8 VDCU_B
+ SG_ TransSelectedGear : 0|8@1+ (1,-125) [-125|125] "" Vector__XXX
+ SG_ TransActGearRatio : 8|16@1+ (0.001,0) [0|64.225] "" Vector__XXX
+ SG_ TransCurrentGear : 24|8@1+ (1,-125) [-125|125] "" RTA
+
+BO_ 2566861351 LiCtrl: 8 VDCU_B
+ SG_ LeftTurnLightReq : 0|4@1+ (1,0) [0|15] "" HLCM_L,RTA
+ SG_ RightTurnLightReq : 4|4@1+ (1,0) [0|15] "" HLCM_R,RTA
+ SG_ HzrdLightReq : 8|1@1+ (1,0) [0|1] "" HLCM_L,HLCM_R,RTA
+ SG_ LowBeamReq : 9|1@1+ (1,0) [0|1] "" ADB_L,ADB_R
+ SG_ HighBeamReq : 10|1@1+ (1,0) [0|1] "" ADB_L,ADB_R
+ SG_ ReverseLampReq : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ MainBrkLightReq : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TrailerBrkLightReq : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PosnLightReq : 16|1@1+ (1,0) [0|1] "" LLCM,HLCM_M,HLCM_L,HLCM_R,RTA
+ SG_ BacklightAdjustReq : 17|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LeftDayTimeRunngLiReq : 21|1@1+ (1,0) [0|1] "" HLCM_L
+ SG_ RightDayTimeRunngLiReq : 22|1@1+ (1,0) [0|1] "" HLCM_R
+ SG_ RearFogLampReq : 23|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RearFogLampReplcmtReq : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LanternLanguageReq : 25|4@1+ (1,0) [0|15] "" HLCM_M,HLCM_L,HLCM_R
+ SG_ LampFollowMeHomeSetSts : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LampAwayHomeSetSts : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ExtrMirrHeatCtrl : 36|2@1+ (1,0) [0|3] "" SWH
+ SG_ ExtrMirrDirAdjmtCtrl_L : 40|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ ExtrMirrDirAdjmtCtrl_R : 43|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ FrontFogLampReq_L : 46|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ FrontFogLampReq_R : 47|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566861607 BodyCtrl1: 8 VDCU_B
+ SG_ WinReq_L : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WinReq_R : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WasherReq : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ WiperReq : 10|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ StartStopButtonLiReq : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RelayReq_ACC : 16|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RelayReq_IG1 : 17|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RelayReq_IG2 : 18|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CrankReq : 19|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RelaySts_ACC : 20|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RelaySts_IG1 : 21|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RelaySts_IG2 : 22|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LowPowerMode : 24|4@1+ (1,0) [0|15] "" LLCM,HLCM_M,HLCM_L,HLCM_R,ADB_L,ADB_R,EPM_D,EPM_P,PDM_D,PDM_P,PSM,WCM,EAC1,EAC2,HFAN2,HFAN1,HFAN3,WPTC3,WPTC1,WPTC2,SWH
+ SG_ RmtLowPowerMode : 29|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RainCloseWinSwt_Fb : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RmtLocaloutreq : 32|2@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ BluetoothKeyConnect : 36|2@1+ (1,0) [0|2] "" Vector__XXX
+ SG_ BluetoothKeyConnectAuthe : 38|3@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ BluetoothKeyLocation : 41|3@1+ (1,0) [0|4] "" Vector__XXX
+ SG_ BluetoothKeyReq : 44|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ BluetoothPhoneConnect : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PrimaryAntennaSleepCom : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ DKM_N_EncryptData : 52|2@1+ (1,0) [0|2] "" Vector__XXX
+
+BO_ 2365443105 OEL: 8 VDCU_B
+ SG_ TurnSignalSwt : 8|4@1+ (1,0) [0|15] "" RTA
+ SG_ HighBeamSwt : 14|2@1+ (1,0) [0|3] "" ADB_L,ADB_R
+ SG_ OvertakinglampSwt : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566875236 LockCtrlSts: 8 VDCU_B
+ SG_ LockSource_MasterLock : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LockSource_SleeperLock : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LockSource_RkeLock : 4|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ LockSource_RemoteLock : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LockSource_AutoReLock : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LockSource_PkeLock : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LockSource_CrashLock : 14|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ LockSource_DKMLock : 16|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ LockSource_Insd_Outd : 19|3@1+ (1,0) [0|3] "" LLCM,HLCM_M
+ SG_ Lock_Unlock_SucessFb : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PlayPrevnSts_LPKE_Unlock : 24|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PlayPrevnSts_LPKE_Lock : 25|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PlayPrevnSts_RPKE_Unlock : 26|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ PlayPrevnSts_RPKE_Lock : 27|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ CentralLockSw : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ AutoUnlockReq : 30|1@1+ (1,0) [0|1] "" PDM_D,PDM_P
+ SG_ SpeedReqLock : 31|1@1+ (1,0) [0|1] "" PDM_D,PDM_P
+ SG_ LockUnlockReq_L : 32|2@1+ (1,0) [0|3] "" PDM_D,PDM_P
+ SG_ LockUnlockReq_R : 34|2@1+ (1,0) [0|3] "" PDM_D,PDM_P
+ SG_ LockOverheatProtection_L : 36|1@1+ (1,0) [0|1] "" PDM_D,PDM_P
+ SG_ LockOverheatProtection_R : 37|1@1+ (1,0) [0|1] "" PDM_D,PDM_P
+ SG_ PlayPrevnSts_LPKE : 38|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ PlayPrevnSts_RPKE : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RearFogLightSts : 42|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RearFogLightFltMode : 43|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RearFogLightSts_T : 45|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RearFogLightFltMode_T : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ExtrMirrHozlAdjMotorSts_R : 48|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ExtrMirrVertAdjMotorSts_R : 50|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ExtrMirrHozlAdjMotorSts_L : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ ExtrMirrVertAdjMotorSts_L : 54|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MainBrkLightSts : 56|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TrailerBrkLightSts : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ MainBrkLightFltMode : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ TrailerBrkLightFltMode : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566842094 TD: 8 VDCU_B
+ SG_ Seconds : 0|8@1+ (0.25,0) [0|63.75] "s" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ Minutes : 8|8@1+ (1,0) [0|255] "mins" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ Hours : 16|8@1+ (1,0) [0|255] "hr" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ Month : 24|8@1+ (1,0) [0|255] "months" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ Day : 32|8@1+ (0.25,0) [0|63.75] "days" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ Year : 40|8@1+ (1,1985) [1985|2240] "years" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ LocalMinuteOffset : 48|8@1+ (1,-125) [-125|125] "min" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+ SG_ LocalHourOffset : 56|8@1+ (1,-125) [-125|125] "h" ADB_L,ADB_R,PDM_D,PDM_P,WCM
+
+BO_ 2566832622 VDHR_18FEC1EE: 8 VDCU_B
+ SG_ HighResolutionTotalVehicleDistance : 0|32@1+ (0.005,0) [0|21055406] "km" ADB_L,ADB_R,EPM_D,EPM_P,PDM_D,PDM_P,PSM,WCM,EAC1,EAC2,HFAN2,HFAN1,HFAN3,WPTC3,WPTC1,WPTC2,SWH
+ SG_ HighResolutionTripDistance : 32|32@1+ (0.005,0) [0|21055406] "km" Vector__XXX
+
+BO_ 2566900119 IVISwSet_Body2: 8 VDCU_B
+ SG_ IVI_HornShiftSwitch : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_VehLockRemindSet : 2|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_LampFollowMeHomeSet : 4|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IVI_LampAwayHomeSet : 8|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IVI_FindMyCarSet : 11|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_SmartWelcomeSet : 13|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_LogoLightSwitch : 16|2@1+ (1,0) [0|3] "" LLCM,HLCM_M
+ SG_ IVI_ADBSwitch : 18|2@1+ (1,0) [0|3] "" ADB_L,ADB_R
+ SG_ IVI_RainAutoCloseWinSet : 20|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_LockAutoCloseWinSet : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_UnlockSet : 24|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_SpeedAutoLockSet : 26|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_StopAutoUnlockSet : 28|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_ApproachAutoUnlockSet : 30|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_AwayAutoLockSet : 32|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_SpeedLimitSet_Sleeper : 34|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_PDMMaxOpeningSet : 36|3@1+ (1,0) [0|7] "" Vector__XXX
+ SG_ IVI_PDMOpenSoundSet : 40|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_PDMOpenSpeedSet : 42|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_WCMEnableSwitch : 44|2@1+ (1,0) [0|3] "" WCM
+ SG_ IVI_LockSetReq : 46|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_BackLightBriSet : 48|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ CeilingLightSet : 52|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_VoiceCtrlFlag_Body2 : 54|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ IVI_VSPOpenSet : 56|2@1+ (1,0) [0|3] "" VSP
+ SG_ IVI_DomeLightSwt : 58|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_DomeLightSwt_R : 60|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IVI_DomeLightSwt_Door : 62|2@1+ (1,0) [0|3] "" Vector__XXX
+
+BO_ 2566900371 LOGStatus: 8 LLCM
+ SG_ LOG_LogoLightSet_Sts : 16|2@1+ (1,0) [0|3] "" VDCU_B
+
+BO_ 2566900372 HLCM_M_Status: 8 HLCM_M
+ SG_ HLCM_M_Set_Sts : 16|2@1+ (1,0) [0|3] "" VDCU_B
+
+BO_ 2565867787 VDC2: 8 VDCU_B
+ SG_ SteerWheelAngle_18F0090B : 0|16@1+ (9.765625E-4,-31.374) [-31.374|32.625056205] "" Vector__XXX
+ SG_ SteerWheelTurnCounter : 16|6@1+ (1,-32) [-32|29] "" Vector__XXX
+ SG_ SteerWheelAngleSensorType : 22|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ YawRate : 24|16@1+ (1.220703125E-4,-3.92) [-3.92|4.07985745] "" ADB_L,ADB_R
+ SG_ LateralAcceleration : 40|16@1+ (4.8828125E-4,-15.687) [-15.687|16.312495335] "" Vector__XXX
+ SG_ LongitudinalAcceleration : 56|8@1+ (0.1,-12.5) [-12.5|12.5] "" Vector__XXX
+
+BO_ 2566872611 RLS1: 8 VDCU_B
+ SG_ RLS_RQ_WiperSPD : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RLS_RQ_LowBeam : 7|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RLS_RQ_PositionLamp : 8|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RLS_Fault_Rain : 9|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RLS_Fault_Light : 10|1@1+ (1,0) [0|1] "" ADB_L,ADB_R
+ SG_ RLS_REP_Error : 11|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RLS_VOLT_Error : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RLS_Brightness_FW : 24|10@1+ (6,0) [0|6126] "LUX" ADB_L,ADB_R
+ SG_ RLS_Rain_Intensity : 34|4@1+ (10,0) [0|100] "%" Vector__XXX
+ SG_ RLS_BigLamp_Threshold_Nr : 38|10@1+ (6,0) [0|6126] "LUX" Vector__XXX
+ SG_ RLS_RainCloseWin_Str : 48|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ RLS_WiperSPD_FuncErr : 49|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RLS_RQ_LowBeam_FuncErr : 51|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ RLS_CheckSum : 56|8@1+ (1,0) [0|255] "" Vector__XXX
+
+BO_ 2566859752 FAS1: 8 VDCU_B
+ SG_ LowBeamSwRq : 4|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ HighBeamSwRq : 6|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FCW_Switch_Fdk : 8|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ FCW_Sensitivity_Fdk : 10|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LDW_Switch_Fdk : 12|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ LDW_Sensitivity_Fdk : 14|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ IHBC_Status : 25|3@1+ (1,0) [0|7] "" ADB_L,ADB_R
+ SG_ SLI_Status : 33|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SLIF_Status : 35|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ SLIF_Warning : 37|1@1+ (1,0) [0|1] "" Vector__XXX
+ SG_ Sign_Speedlimit : 41|4@1+ (1,0) [0|15] "" Vector__XXX
+ SG_ Sign_SpeedLimitCancelled : 49|1@1+ (1,0) [0|1] "" Vector__XXX
+
+BO_ 2566878624 FCS_Obj_01: 8 VDCU_B
+ SG_ FCS_01_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_01_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_01_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_01_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_01_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_01_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_01_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_01_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566878880 FCS_Obj_02: 8 VDCU_B
+ SG_ FCS_02_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_02_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_02_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_02_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_02_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_02_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_02_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_02_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566879136 FCS_Obj_03: 8 VDCU_B
+ SG_ FCS_03_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_03_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_03_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_03_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_03_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_03_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_03_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_03_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566879392 FCS_Obj_04: 8 VDCU_B
+ SG_ FCS_04_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_04_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_04_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_04_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_04_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_04_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_04_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_04_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566879648 FCS_Obj_05: 8 VDCU_B
+ SG_ FCS_05_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_05_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_05_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_05_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_05_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_05_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_05_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_05_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566879904 FCS_Obj_06: 8 VDCU_B
+ SG_ FCS_06_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_06_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_06_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_06_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_06_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_06_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_06_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_06_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566880160 FCS_Obj_07: 8 VDCU_B
+ SG_ FCS_07_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_07_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_07_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_07_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_07_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_07_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_07_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_07_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566880416 FCS_Obj_08: 8 VDCU_B
+ SG_ FCS_08_Obj_Motion_Category : 0|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_08_Obj_PosHeadingAng : 4|4@1+ (0.01,-3.14) [-3.14|7.1] "rad" ADB_L,ADB_R
+ SG_ FCS_08_Obj_YPos : 8|13@1+ (0.015625,-64) [-64|63.984375] "m" ADB_L,ADB_R
+ SG_ FCS_08_Obj_Type : 35|8@1+ (1,0) [0|255] "n/a" ADB_L,ADB_R
+ SG_ FRS_08_Obj_XPos : 21|14@1+ (0.1,-100) [-100|309.4] "m" ADB_L,ADB_R
+ SG_ FCS_08_Msg_AliveCounter : 48|4@1+ (1,0) [0|15] "n/a" Vector__XXX
+ SG_ FCS_08_Obj_MeasFlag : 43|1@1+ (1,0) [0|1] "n/a" Vector__XXX
+ SG_ FRS_08_Msg_CheckSum : 52|8@1+ (1,0) [0|255] "n/a" Vector__XXX
+
+BO_ 2566869400 ADB_L_State: 8 ADB_L
+ SG_ ADB_L_SwitchSet_Sts : 8|2@1+ (1,0) [0|3] "" VDCU_B
+
+BO_ 2566869657 ADB_R_State: 8 ADB_R
+ SG_ ADB_R_SwitchSet_Sts : 8|2@1+ (1,0) [0|3] "" VDCU_B
+
+
+CM_ BO_ 2566861607 "VDCU控制/转发";
+CM_ BO_ 2365443105 "灯光开关";
+CM_ BO_ 2566832622 "配置出口记录仪时 仪表收其他情况仪表发";
+CM_ BO_ 2566900119 "车控设置";
+CM_ SG_ 2566892165 WCM1_key_status "Describe the status of WPC switch: ON or OFF无线充电器控制反馈（WPC当前状态）系统做记忆";
+CM_ SG_ 2566892165 WCM1_charge_status "Describe the status of charge of the WPC:standby,charging,charging completed,WPC failure.手机无线充电状态";
+CM_ SG_ 2566892165 WCM1_fault_status "Describe the current failure status of WPC.故障信息类别";
+CM_ SG_ 2566892165 WCM1_phone_reminder "Describe whether there is a phone forgotten in the car.手机遗忘提醒";
+CM_ SG_ 2566872532 LCM_L_St_RunningLight "昼行灯工作状态";
+CM_ SG_ 2566872532 LCM_L_St_LeftTurnLight "转向灯工作状态";
+CM_ SG_ 2566872532 LCM_L_St_TractorMarkerLight "位置灯工作状态";
+CM_ SG_ 2566872532 LCM_L_St_LampFlicker "灯语执行状态";
+CM_ SG_ 2566872532 LCM_L_F_OverVoltage "过压故障";
+CM_ SG_ 2566872532 LCM_L_F_UnderVoltage "欠压故障";
+CM_ SG_ 2566872532 LCM_L_F_RunningLight "昼行灯故障模式";
+CM_ SG_ 2566872532 LCM_L_F_LeftTurnLight "转向灯故障模式";
+CM_ SG_ 2566872532 LCM_L_F_TractorMarkerLight "位置灯故障模式";
+CM_ SG_ 2566872533 LCM_R_St_RunningLight "昼行灯工作状态";
+CM_ SG_ 2566872533 LCM_R_St_RightTurnLight "转向灯工作状态";
+CM_ SG_ 2566872533 LCM_R_St_TractorMarkerLight "位置灯工作状态";
+CM_ SG_ 2566872533 LCM_R_St_LampFlicker "灯语执行状态";
+CM_ SG_ 2566872533 LCM_R_F_OverVoltage "过压故障";
+CM_ SG_ 2566872533 LCM_R_F_UnderVoltage "欠压故障";
+CM_ SG_ 2566872533 LCM_R_F_RunningLight "昼行灯故障模式";
+CM_ SG_ 2566872533 LCM_R_F_LeftTurnLight "转向灯故障模式";
+CM_ SG_ 2566872533 LCM_R_F_TractorMarkerLight "位置灯故障模式";
+CM_ SG_ 2566853359 VBUS_VCU4_N_VehicleSpeed "实际车速";
+CM_ SG_ 2566853359 VBUS_VCU4_N_AverageConsumedPower "平均电耗";
+CM_ SG_ 2566853359 VBUS_VCU4_St_Gears "档位状态";
+CM_ SG_ 2566853359 VBUS_VCU4_St_Ready "ready信号";
+CM_ SG_ 2566853359 VBUS_VCU4_St_Vehicle "整车状态";
+CM_ SG_ 2566853359 VBUS_VCU4_St_Interlocking "互锁状态";
+CM_ SG_ 2566853359 VBUS_VCU4_St_ShiftGearBrkOn "换挡请踩制动";
+CM_ SG_ 2566853359 VBUS_VCU4_F_ShiftGears "换挡不成功状态提示";
+CM_ SG_ 2566853359 VBUS_VCU4_F_Motor "电机故障";
+CM_ SG_ 2566853359 VBUS_VCU4_F_MotorOverTemp "电机过热报警";
+CM_ SG_ 2566853359 VBUS_VCU4_St_DISCHARGE_STA "车辆放电状态";
+CM_ SG_ 2566853359 VBUS_VCU4_N_EVRemainDriverRange "纯电剩余可行驶里程";
+CM_ SG_ 2566853359 VBUS_VCU4_St_BrakeSta "制动踏板状态";
+CM_ SG_ 2566853359 VBUS_VCU4_St_Thermal_runaway "动力电池热失控预警";
+CM_ SG_ 2566853359 VBUS_VCU4_RollingCounter "VCU计数器";
+CM_ SG_ 2566853615 VBUS_VCU5_N_DCVoltage "动力电池总电压";
+CM_ SG_ 2566853615 VBUS_VCU5_N_DCCurrent "动力电池总电流";
+CM_ SG_ 2566853615 VBUS_VCU5_N_SOC "动力电池剩余电量";
+CM_ SG_ 2566853615 VBUS_VCU5_St_LowSOC "SOC低警示灯";
+CM_ SG_ 2566853615 VBUS_VCU5_St_BatteryCHGHeating "动力电池充电加热模式提示";
+CM_ SG_ 2566853615 VBUS_VCU5_F_Battery "电池故障";
+CM_ SG_ 2566853615 VBUS_VCU5_F_OverTemperature "电池过热";
+CM_ SG_ 2566853615 VBUS_VCU5_F_LVBattVoltageLow "低压蓄电池电压低指示";
+CM_ SG_ 2566853615 VBUS_VCU5_St_HVDisConnect "高压断开状态";
+CM_ SG_ 2566853615 VBUS_VCU5_F_Isolation "绝缘故障";
+CM_ SG_ 2566853615 VBUS_VCU5_St_ChargerIndicator "充电指示";
+CM_ SG_ 2566853615 VBUS_VCU5_St_ChargerLine "充电线连接状态";
+CM_ SG_ 2566853615 VBUS_VCU5_St_EnergyFlow "能量流显示";
+CM_ SG_ 2566853615 VBUS_VCU5_St_ChargeMode "充电模式";
+CM_ SG_ 2566853615 VBUS_VCU5_St_PowerReduceOperation "降功率运行标志位";
+CM_ SG_ 2565866755 TransSelectedGear "The gear that the transmission will attempt to achieve during the current shift if a shift is in progress, or the next shift if one目标档位";
+CM_ SG_ 2565866755 TransActGearRatio "Actual ratio of input shaft speed to output shaft speed";
+CM_ SG_ 2565866755 TransCurrentGear "The gear currently engaged in the transmission or the last gear engaged while the transmission is in the process of当前档位";
+CM_ SG_ 2566861351 LeftTurnLightReq "左转向灯驱动请求";
+CM_ SG_ 2566861351 RightTurnLightReq "右转向灯驱动请求";
+CM_ SG_ 2566861351 HzrdLightReq "危报灯驱动请求";
+CM_ SG_ 2566861351 LowBeamReq "近光灯控制请求";
+CM_ SG_ 2566861351 HighBeamReq "远光灯控制请求";
+CM_ SG_ 2566861351 ReverseLampReq "倒车灯控制请求";
+CM_ SG_ 2566861351 MainBrkLightReq "主车制动灯驱动请求";
+CM_ SG_ 2566861351 TrailerBrkLightReq "挂车制动灯驱动请求";
+CM_ SG_ 2566861351 PosnLightReq "位置灯控制请求";
+CM_ SG_ 2566861351 BacklightAdjustReq "背光亮度调节请求";
+CM_ SG_ 2566861351 LeftDayTimeRunngLiReq "左昼行灯驱动请求";
+CM_ SG_ 2566861351 RightDayTimeRunngLiReq "右昼行灯驱动请求";
+CM_ SG_ 2566861351 RearFogLampReq "后雾灯控制请求";
+CM_ SG_ 2566861351 RearFogLampReplcmtReq "后雾灯代替制动灯请求";
+CM_ SG_ 2566861351 LanternLanguageReq "灯语请求";
+CM_ SG_ 2566861351 LampFollowMeHomeSetSts "伴我回家功能设置成功状态反馈";
+CM_ SG_ 2566861351 LampAwayHomeSetSts "照我离家功能设置成功反馈";
+CM_ SG_ 2566861351 ExtrMirrHeatCtrl "后视镜加热控制";
+CM_ SG_ 2566861351 ExtrMirrDirAdjmtCtrl_L "左侧后视镜视野调节控制";
+CM_ SG_ 2566861351 ExtrMirrDirAdjmtCtrl_R "右侧后视镜视野调节控制";
+CM_ SG_ 2566861351 FrontFogLampReq_L "左前雾灯控制请求";
+CM_ SG_ 2566861351 FrontFogLampReq_R "右前雾灯控制请求";
+CM_ SG_ 2566861607 WinReq_L "主驾车窗升降控制请求";
+CM_ SG_ 2566861607 WinReq_R "副驾车窗升降控制请求";
+CM_ SG_ 2566861607 WasherReq "喷淋电机驱动请求";
+CM_ SG_ 2566861607 WiperReq "雨刮驱动请求";
+CM_ SG_ 2566861607 StartStopButtonLiReq "一键启动开关指示灯驱动命令";
+CM_ SG_ 2566861607 RelayReq_ACC "ACC继电器吸合命令";
+CM_ SG_ 2566861607 RelayReq_IG1 "IG1继电器吸合命令";
+CM_ SG_ 2566861607 RelayReq_IG2 "IG2继电器吸合命令";
+CM_ SG_ 2566861607 CrankReq "Crank命令";
+CM_ SG_ 2566861607 RelaySts_ACC "ACC继电器状态";
+CM_ SG_ 2566861607 RelaySts_IG1 "IG1继电器状态";
+CM_ SG_ 2566861607 RelaySts_IG2 "IG2继电器状态";
+CM_ SG_ 2566861607 LowPowerMode "低压电源状态";
+CM_ SG_ 2566861607 RmtLowPowerMode "低压电源远控标志位";
+CM_ SG_ 2566861607 RainCloseWinSwt_Fb "雨天自动关窗设置反馈";
+CM_ SG_ 2566861607 RmtLocaloutreq "本地事件触发退出远控请求(VDCU)";
+CM_ SG_ 2566861607 BluetoothKeyConnect "蓝牙钥匙是否连接";
+CM_ SG_ 2566861607 BluetoothKeyConnectAuthe "蓝牙钥匙连接认证";
+CM_ SG_ 2566861607 BluetoothKeyLocation "蓝牙钥匙位置";
+CM_ SG_ 2566861607 BluetoothKeyReq "蓝牙钥匙请求";
+CM_ SG_ 2566861607 BluetoothPhoneConnect "手机蓝牙是否连接";
+CM_ SG_ 2566861607 PrimaryAntennaSleepCom "主天线休眠指令";
+CM_ SG_ 2566861607 DKM_N_EncryptData "蓝牙加密验证结果信号";
+CM_ SG_ 2365443105 TurnSignalSwt "转向灯开关（小于700ms为变道）";
+CM_ SG_ 2365443105 HighBeamSwt "远光开关";
+CM_ SG_ 2365443105 OvertakinglampSwt "超车开关";
+CM_ SG_ 2566875236 LockSource_MasterLock "中控解闭锁请求来源";
+CM_ SG_ 2566875236 LockSource_SleeperLock "卧铺侧解闭锁请求来源";
+CM_ SG_ 2566875236 LockSource_RkeLock "遥控钥匙解锁请求来源";
+CM_ SG_ 2566875236 LockSource_RemoteLock "远程解闭锁请求来源";
+CM_ SG_ 2566875236 LockSource_AutoReLock "自动闭锁回防请求来源";
+CM_ SG_ 2566875236 LockSource_PkeLock "PKE解闭锁请求来源";
+CM_ SG_ 2566875236 LockSource_CrashLock "碰撞解锁请求来源";
+CM_ SG_ 2566875236 LockSource_DKMLock "蓝牙解闭锁请求来源";
+CM_ SG_ 2566875236 LockSource_Insd_Outd "车辆内外部解闭锁命令";
+CM_ SG_ 2566875236 Lock_Unlock_SucessFb "成功解闭锁";
+CM_ SG_ 2566875236 PlayPrevnSts_LPKE_Unlock "主驾解锁PKE防玩模式";
+CM_ SG_ 2566875236 PlayPrevnSts_LPKE_Lock "主驾闭锁PKE防玩模式";
+CM_ SG_ 2566875236 PlayPrevnSts_RPKE_Unlock "副驾解锁PKE防玩模式";
+CM_ SG_ 2566875236 PlayPrevnSts_RPKE_Lock "副驾闭锁PKE防玩模式";
+CM_ SG_ 2566875236 CentralLockSw "中控解闭锁开关状态";
+CM_ SG_ 2566875236 AutoUnlockReq "熄火解锁请求";
+CM_ SG_ 2566875236 SpeedReqLock "车速锁请求闭锁";
+CM_ SG_ 2566875236 LockUnlockReq_L "左侧门锁控制请求";
+CM_ SG_ 2566875236 LockUnlockReq_R "右侧（及后排）门锁控制请求";
+CM_ SG_ 2566875236 LockOverheatProtection_L "主驾门锁电机过热保护";
+CM_ SG_ 2566875236 LockOverheatProtection_R "副驾门锁电机过热保护";
+CM_ SG_ 2566875236 PlayPrevnSts_LPKE "主驾PKE防玩模式";
+CM_ SG_ 2566875236 PlayPrevnSts_RPKE "副驾PKE防玩模式";
+CM_ SG_ 2566875236 RearFogLightSts "后雾灯驱动状态";
+CM_ SG_ 2566875236 RearFogLightFltMode "后雾灯故障模式";
+CM_ SG_ 2566875236 RearFogLightSts_T "挂车后雾灯驱动状态";
+CM_ SG_ 2566875236 RearFogLightFltMode_T "挂车后雾灯故障模式";
+CM_ SG_ 2566875236 ExtrMirrHozlAdjMotorSts_R "右侧外后视镜左右调节电机故障状态";
+CM_ SG_ 2566875236 ExtrMirrVertAdjMotorSts_R "右侧外后视镜上下调节电机故障状态";
+CM_ SG_ 2566875236 ExtrMirrHozlAdjMotorSts_L "左侧外后视镜左右调节电机故障状态";
+CM_ SG_ 2566875236 ExtrMirrVertAdjMotorSts_L "左侧外后视镜上下调节电机故障状态";
+CM_ SG_ 2566875236 MainBrkLightSts "主车制动灯状态";
+CM_ SG_ 2566875236 TrailerBrkLightSts "挂车制动灯状态";
+CM_ SG_ 2566875236 MainBrkLightFltMode "主车制动灯故障模式";
+CM_ SG_ 2566875236 TrailerBrkLightFltMode "挂车制动灯故障模式";
+CM_ SG_ 2566842094 Seconds "The seconds component of the current time of day.";
+CM_ SG_ 2566842094 Minutes "The minutes component of the current time of day.";
+CM_ SG_ 2566842094 Hours "The hour component of the current time of day.";
+CM_ SG_ 2566842094 Month "The month component of the current calendar date.";
+CM_ SG_ 2566842094 Day "The day component of the current calendar date.";
+CM_ SG_ 2566842094 Year "The year component of the current calendar date.";
+CM_ SG_ 2566842094 LocalMinuteOffset "国内北京时间填充FA，海外填有效值";
+CM_ SG_ 2566842094 LocalHourOffset "国内北京时间填充FA，海外填有效值";
+CM_ SG_ 2566832622 HighResolutionTotalVehicleDistance "Accumulated distance traveled by the vehicle during its operation.总里程";
+CM_ SG_ 2566832622 HighResolutionTripDistance "Distance traveled during all or part of a journey.小计里程";
+CM_ SG_ 2566900119 IVI_HornShiftSwitch "预留软开关。喇叭切换开关，1、气喇叭；2、电喇叭。";
+CM_ SG_ 2566900119 IVI_VehLockRemindSet "锁车提示设置请求，包含以下状态:1、双闪灯模式；2、双闪灯+喇叭模式。";
+CM_ SG_ 2566900119 IVI_LampFollowMeHomeSet "伴我回家灯光点亮时间设置，包含以下状态:1、30S；2、60S；3、90S。";
+CM_ SG_ 2566900119 IVI_LampAwayHomeSet "照我离家灯光点亮时间设置，包含以下状态:1、30S；2、60S；3、90S。";
+CM_ SG_ 2566900119 IVI_FindMyCarSet "寻车模式，包含以下状态:1、双闪灯模式；2、双闪灯+喇叭模式。";
+CM_ SG_ 2566900119 IVI_SmartWelcomeSet "智能迎宾模式开启关闭设置，包含以下状态:1、关闭；2、开启";
+CM_ SG_ 2566900119 IVI_LogoLightSwitch "Logo灯开关";
+CM_ SG_ 2566900119 IVI_ADBSwitch "ADB功能开启、关闭请求，包含以下请求:1、开启；2、关闭。";
+CM_ SG_ 2566900119 IVI_RainAutoCloseWinSet "雨天自动关窗设置";
+CM_ SG_ 2566900119 IVI_LockAutoCloseWinSet "锁车自动关窗功能设置请求";
+CM_ SG_ 2566900119 IVI_UnlockSet "单门或 全车解锁设置";
+CM_ SG_ 2566900119 IVI_SpeedAutoLockSet "行车闭锁";
+CM_ SG_ 2566900119 IVI_StopAutoUnlockSet "熄火解锁功能设置请求";
+CM_ SG_ 2566900119 IVI_ApproachAutoUnlockSet "近车自动解锁Approaching Vehicle AUTO Unlock";
+CM_ SG_ 2566900119 IVI_AwayAutoLockSet "离车自动闭锁";
+CM_ SG_ 2566900119 IVI_SpeedLimitSet_Sleeper "卧铺测车速限制信号";
+CM_ SG_ 2566900119 IVI_PDMMaxOpeningSet "自动门最大开度调节";
+CM_ SG_ 2566900119 IVI_PDMOpenSoundSet "自动门开闭提示音开关";
+CM_ SG_ 2566900119 IVI_PDMOpenSpeedSet "自动门开启速度调节开关";
+CM_ SG_ 2566900119 IVI_WCMEnableSwitch "手机无线充电功能使能";
+CM_ SG_ 2566900119 IVI_LockSetReq "锁车请求";
+CM_ SG_ 2566900119 IVI_BackLightBriSet "背光亮度调节设置";
+CM_ SG_ 2566900119 CeilingLightSet "顶灯控制请求（开关、语音）";
+CM_ SG_ 2566900119 IVI_VoiceCtrlFlag_Body2 "喇叭切换语音控制标志位";
+CM_ SG_ 2566900119 IVI_VSPOpenSet "VPS开启关闭请求";
+CM_ SG_ 2566900119 IVI_DomeLightSwt "Beacon预留。顶灯开关请求（L5左侧）";
+CM_ SG_ 2566900119 IVI_DomeLightSwt_R "Beacon预留。顶灯开关请求-右侧";
+CM_ SG_ 2566900119 IVI_DomeLightSwt_Door "Beacon预留。顶灯Door开关设置";
+CM_ SG_ 2566900371 LOG_LogoLightSet_Sts "Logo灯开关设置反馈";
+CM_ SG_ 2566900372 HLCM_M_Set_Sts "设置状态的反馈（共用Logo灯开关）";
+CM_ SG_ 2565867787 SteerWheelAngle_18F0090B "The main operator`s steering wheel angle (on the steering column, not the actual wheel angle).Invalid Value:0xFAFF~0xFFFF";
+CM_ SG_ 2565867787 SteerWheelTurnCounter "Indicates number of steering wheel turns, absolute position or relative position at ignition on.";
+CM_ SG_ 2565867787 SteerWheelAngleSensorType "Indicates whether the steering wheel angle sensor is capable of absolute measuring of the number of steering wheel";
+CM_ SG_ 2565867787 YawRate "Indicates the rotation about the vertical axis.Invalid Value:0xFAE2~0xFFFF";
+CM_ SG_ 2565867787 LateralAcceleration "Indicates a lateral acceleration of the vehicle.Invalid Value:0xFAE2~0xFFFF";
+CM_ SG_ 2565867787 LongitudinalAcceleration "Indicates the longitudinal acceleration of the vehicle.";
+CM_ SG_ 2566872611 RLS_RQ_WiperSPD "The Sensor requested wiper speed 雨量传感器请求的雨刮速度.";
+CM_ SG_ 2566872611 RLS_RQ_LowBeam "Auto low beam request 近光灯点亮请求";
+CM_ SG_ 2566872611 RLS_RQ_PositionLamp "Auto position lamp request 位置灯点亮请求";
+CM_ SG_ 2566872611 RLS_Fault_Rain "Rain sensor fault status 雨量传感器故障状态";
+CM_ SG_ 2566872611 RLS_Fault_Light "Light sensor fault status 光亮传感器故障状态";
+CM_ SG_ 2566872611 RLS_REP_Error "RLS LIN response error RLS通讯故障状态";
+CM_ SG_ 2566872611 RLS_VOLT_Error "RLS Voltage error RLS检测电池电压错误";
+CM_ SG_ 2566872611 RLS_Brightness_FW "The Visible Ambientlight (540nm) measured by Spot FW 可见环境光亮度";
+CM_ SG_ 2566872611 RLS_Rain_Intensity "This signal delivers information about rain intensity: from 0%(no rain) to 100% (very heavy rain) 降雨强度：从0%到100%";
+CM_ SG_ 2566872611 RLS_BigLamp_Threshold_Nr "大灯开启阀值信号";
+CM_ SG_ 2566872611 RLS_RainCloseWin_Str "雨天关窗信号";
+CM_ SG_ 2566872611 RLS_WiperSPD_FuncErr "雨刮功能安全故障";
+CM_ SG_ 2566872611 RLS_RQ_LowBeam_FuncErr "近光灯功能安全故障";
+CM_ SG_ 2566872611 RLS_CheckSum "E2E Checksum";
+CM_ SG_ 2566859752 LowBeamSwRq "Command to activate or de-activate the tractor low beam head light lamps.近光灯";
+CM_ SG_ 2566859752 HighBeamSwRq "Command to activate or de-activate the tractor high beam head light lamps.远光灯";
+CM_ SG_ 2566859752 FCW_Switch_Fdk "FCW软开关设置反馈";
+CM_ SG_ 2566859752 FCW_Sensitivity_Fdk "FCW灵敏度设置反馈";
+CM_ SG_ 2566859752 LDW_Switch_Fdk "LDW软开关设置反馈";
+CM_ SG_ 2566859752 LDW_Sensitivity_Fdk "LDW灵敏度设置反馈";
+CM_ SG_ 2566859752 IHBC_Status "IHBC状态";
+CM_ SG_ 2566859752 SLI_Status "SLI状态";
+CM_ SG_ 2566859752 SLIF_Status "SLIF状态";
+CM_ SG_ 2566859752 SLIF_Warning "SLIF报警";
+CM_ SG_ 2566859752 Sign_Speedlimit "速度限制符号值";
+CM_ SG_ 2566859752 Sign_SpeedLimitCancelled "速度限制取消";
+CM_ SG_ 2566878624 FCS_01_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566878624 FCS_01_Obj_PosHeadingAng "The orientation angle of the target obstacle 1.目标障碍物1朝向角度";
+CM_ SG_ 2566878624 FCS_01_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566878624 FCS_01_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566878624 FRS_01_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566878624 FCS_01_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566878624 FCS_01_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566878624 FRS_01_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566878880 FCS_02_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566878880 FCS_02_Obj_PosHeadingAng "The orientation angle of the target obstacle 2.目标障碍物2朝向角度";
+CM_ SG_ 2566878880 FCS_02_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566878880 FCS_02_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566878880 FRS_02_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566878880 FCS_02_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566878880 FCS_02_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566878880 FRS_02_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566879136 FCS_03_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566879136 FCS_03_Obj_PosHeadingAng "The orientation angle of the target obstacle 3.目标障碍物3朝向角度";
+CM_ SG_ 2566879136 FCS_03_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566879136 FCS_03_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566879136 FRS_03_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566879136 FCS_03_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566879136 FCS_03_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566879136 FRS_03_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566879392 FCS_04_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566879392 FCS_04_Obj_PosHeadingAng "The orientation angle of the target obstacle 4.目标障碍物4朝向角度";
+CM_ SG_ 2566879392 FCS_04_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566879392 FCS_04_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566879392 FRS_04_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566879392 FCS_04_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566879392 FCS_04_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566879392 FRS_04_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566879648 FCS_05_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566879648 FCS_05_Obj_PosHeadingAng "The orientation angle of the target obstacle 5.目标障碍物5朝向角度";
+CM_ SG_ 2566879648 FCS_05_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566879648 FCS_05_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566879648 FRS_05_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566879648 FCS_05_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566879648 FCS_05_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566879648 FRS_05_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566879904 FCS_06_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566879904 FCS_06_Obj_PosHeadingAng "The orientation angle of the target obstacle 6.目标障碍物6朝向角度";
+CM_ SG_ 2566879904 FCS_06_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566879904 FCS_06_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566879904 FRS_06_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566879904 FCS_06_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566879904 FCS_06_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566879904 FRS_06_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566880160 FCS_07_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566880160 FCS_07_Obj_PosHeadingAng "The orientation angle of the target obstacle 7.目标障碍物7朝向角度";
+CM_ SG_ 2566880160 FCS_07_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566880160 FCS_07_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566880160 FRS_07_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566880160 FCS_07_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566880160 FCS_07_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566880160 FRS_07_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566880416 FCS_08_Obj_Motion_Category "The orientation angle of the target obstacle.目标障碍物朝向角度";
+CM_ SG_ 2566880416 FCS_08_Obj_PosHeadingAng "The orientation angle of the target obstacle 8.目标障碍物8朝向角度";
+CM_ SG_ 2566880416 FCS_08_Obj_YPos "Position of target object in lateral directioncenter of vehicle rear axle shaft is reference point.目标物体在横向方向的位置车辆后桥轴中心为参考点。";
+CM_ SG_ 2566880416 FCS_08_Obj_Type "To indicate the estimated type of Object   表示对象的估计类型0x00: None0x01: Car0x02: Truck0x03: Bicycle0x04: Moto0x05: PasserBy0x06: Conical Barrel0x07: Uncertainvehicle0xFF: Invalid";
+CM_ SG_ 2566880416 FRS_08_Obj_XPos "Position of target object in longitudinal directioncenter of vehicle rear axle shaft is reference point.目标物体在纵向上的位置车辆前桥轴中心为参考点。";
+CM_ SG_ 2566880416 FCS_08_Msg_AliveCounter "Alive counter shall be incremented every radar sensor measurement cycle.每一次雷达传感器测量周期都要增加活计数器。";
+CM_ SG_ 2566880416 FCS_08_Obj_MeasFlag "This signal indicates whether the latest sensor measurement observed the object or extrapolated.0x0: object measured in this cycle0x1: object extrapolated in this cycle这个信号表明最新的传感器测量是观察到该物体还是外推。0x0:在此周期内测量的对象0x1:在这个循环中外推的对象";
+CM_ SG_ 2566880416 FRS_08_Msg_CheckSum "Check sum shall be generated out of each message content. check sum generation logic is TBC.每条消息内容都要生成校验和。校验和生成逻辑为TBC。";
+CM_ SG_ 2566869400 ADB_L_SwitchSet_Sts "ABD开关设置状态反馈";
+CM_ SG_ 2566869657 ADB_R_SwitchSet_Sts "ABD开关设置状态反馈";
+
+BA_DEF_ BO_ "StartDelay" INT 0 0;
+BA_DEF_ BO_ "GenMsgStartDelayTime" INT 0 0;
+BA_DEF_ BO_ "GenMsgSendType" ENUM "Cycle","NoMsgSendType","IfActive","Event","CA","CE";
+BA_DEF_ BO_ "GenMsgNrOfRepetition" INT 0 0;
+BA_DEF_ BO_ "GenMsgILSupport" ENUM "No","Yes";
+BA_DEF_ BO_ "GenMsgDelayTime" INT 0 0;
+BA_DEF_ BO_ "GenMsgCycleTimeFast" INT 0 0;
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 0;
+BA_DEF_ BO_ "DiagState" ENUM "No","Yes";
+BA_DEF_ BO_ "DiagResponse" ENUM "No","Yes";
+BA_DEF_ BO_ "DiagRequest" ENUM "No","Yes";
+BA_DEF_ BO_ "NmMessage" ENUM "No","Yes";
+BA_DEF_ BO_ "VFrameFormat" ENUM "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ BO_ "J1939FdTpADT" INT 0 255;
+BA_DEF_ BO_ "J1939FdTpADS" INT 0 52;
+BA_DEF_ BO_ "J1939CPgTF" INT 0 7;
+BA_DEF_ BO_ "J1939CPgTOS" INT 0 7;
+BA_DEF_ BO_ "J1939CPgSendTimeout" INT -1 3600000;
+BA_DEF_ BO_ "J1939PgAppearanceOnBus" ENUM "Default","CAN_Extended","CANFD_Extended";
+BA_DEF_ BO_ "FsJ1939UseCrcAndCounter" STRING ;
+BA_DEF_ BO_ "FsJ1939Delay" INT 0 1000;
+BA_DEF_ BO_ "FsJ1939NeedsSHM" ENUM "No","Yes";
+BA_DEF_ BO_ "TpJ1939VarDlc" ENUM "No","Yes";
+BA_DEF_ BO_ "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ BO_ "GenMsgRequestable" INT 0 1;
+BA_DEF_ BU_ "TerminalNode" ENUM "No","Yes";
+BA_DEF_ BU_ "NodeLayerModules" STRING ;
+BA_DEF_ BU_ "NmStationAddress" HEX 0 255;
+BA_DEF_ BU_ "NmNode" ENUM "Yes","No";
+BA_DEF_ BU_ "NmCAN" INT 1 2;
+BA_DEF_ BU_ "ILUsed" ENUM "No","Yes";
+BA_DEF_ BU_ "CANoeStartDelay" INT 0 10;
+BA_DEF_ BU_ "CANoeJitterMin" INT 0 0;
+BA_DEF_ BU_ "CANoeJitterMax" INT 0 0;
+BA_DEF_ BU_ "CANoeDrift" INT 0 0;
+BA_DEF_ BU_ "J1939MultiPgBroadcastType" ENUM "FBFF","FEFF";
+BA_DEF_ BU_ "J1939MultiPgSizeThreshold" INT 0 64;
+BA_DEF_ BU_ "J1939MultiPgSendTimeout" INT 0 3600000;
+BA_DEF_ BU_ "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_ "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_ "NmJ1939System" INT 0 127;
+BA_DEF_ BU_ "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_ "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_ "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_ "NmJ1939ECUInstance" INT 0 7;
+BA_DEF_ BU_ "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_ "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_ "ECU" STRING ;
+BA_DEF_ BU_ "CANFD_CANFD_Gateway" ENUM "Yes","No";
+BA_DEF_ BU_ "CAN_CANFD_Gateway" ENUM "Yes","No";
+BA_DEF_ BU_ "CANFD_LIN_Gateway" ENUM "Yes","No";
+BA_DEF_ BU_ "ECUDisplayName" STRING ;
+BA_DEF_ BU_ "CAN_LIN_Gateway" ENUM "Yes","No";
+BA_DEF_ BU_ "CAN_CAN_Gateway" ENUM "Yes","No";
+BA_DEF_ BU_ "BootloaderNode" ENUM "No","Yes";
+BA_DEF_ "NmType" STRING ;
+BA_DEF_ "VersionYear" INT 2010 2999;
+BA_DEF_ "VersionNumber" INT 0 99;
+BA_DEF_ "VersionMonth" INT 0 12;
+BA_DEF_ "VersionDay" INT 0 31;
+BA_DEF_ "ProtocolType" STRING ;
+BA_DEF_ "NmMessageCount" INT 0 255;
+BA_DEF_ "NmBaseAddress" HEX 0 2047;
+BA_DEF_ "Manufacturer" STRING ;
+BA_DEF_ "ILTxTimeout" INT 0 100;
+BA_DEF_ "DBName" STRING ;
+BA_DEF_ "BusType" STRING ;
+BA_DEF_ "Baudrate" INT 0 1000000;
+BA_DEF_ "SAE_J1939_DA_SpecVersion" STRING ;
+BA_DEF_ "SAE_J1939_81_SpecVersion" STRING ;
+BA_DEF_ "DatabaseVersion" STRING ;
+BA_DEF_ "SAE_J1939_21_SpecVersion" STRING ;
+BA_DEF_ SG_ "GenSigInvalidValue" HEX 0 0;
+BA_DEF_ SG_ "GenSigStartValue" HEX 0 0;
+BA_DEF_ SG_ "GenSigInactiveValue" HEX 0 0;
+BA_DEF_ SG_ "GenSigRoutingTimeoutValue" HEX 0 0;
+BA_DEF_ SG_ "GenSigSendType" ENUM "Cycle","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType","vector_leerstring";
+BA_DEF_ SG_ "SPN" INT 0 0;
+BA_DEF_ SG_ "E2EProfile" STRING ;
+BA_DEF_ SG_ "ASIL" STRING ;
+BA_DEF_ SG_ "GenSigDataID" STRING ;
+BA_DEF_ SG_ "SigType" ENUM "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_ "GenSigILSupport" ENUM "No","Yes";
+BA_DEF_ SG_ "GenSigEVName" STRING ;
+BA_DEF_DEF_ "StartDelay" 0;
+BA_DEF_DEF_ "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_ "GenMsgSendType" "Cycle";
+BA_DEF_DEF_ "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_ "GenMsgILSupport" "Yes";
+BA_DEF_DEF_ "GenMsgDelayTime" 0;
+BA_DEF_DEF_ "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_ "GenMsgCycleTime" 100;
+BA_DEF_DEF_ "DiagState" "No";
+BA_DEF_DEF_ "DiagResponse" "No";
+BA_DEF_DEF_ "DiagRequest" "No";
+BA_DEF_DEF_ "NmMessage" "No";
+BA_DEF_DEF_ "VFrameFormat" "StandardCAN";
+BA_DEF_DEF_ "J1939FdTpADT" 0;
+BA_DEF_DEF_ "J1939FdTpADS" 0;
+BA_DEF_DEF_ "J1939CPgTF" 0;
+BA_DEF_DEF_ "J1939CPgTOS" 2;
+BA_DEF_DEF_ "J1939CPgSendTimeout" -1;
+BA_DEF_DEF_ "J1939PgAppearanceOnBus" "Default";
+BA_DEF_DEF_ "FsJ1939UseCrcAndCounter" "";
+BA_DEF_DEF_ "FsJ1939Delay" 0;
+BA_DEF_DEF_ "FsJ1939NeedsSHM" "No";
+BA_DEF_DEF_ "TpJ1939VarDlc" "No";
+BA_DEF_DEF_ "GenMsgFastOnStart" 0;
+BA_DEF_DEF_ "GenMsgRequestable" 1;
+BA_DEF_DEF_ "TerminalNode" "No";
+BA_DEF_DEF_ "NodeLayerModules" "OSEKNM01.dll,CANoeILNLVector.dll";
+BA_DEF_DEF_ "NmStationAddress" 254;
+BA_DEF_DEF_ "NmNode" "No";
+BA_DEF_DEF_ "NmCAN" 2;
+BA_DEF_DEF_ "ILUsed" "Yes";
+BA_DEF_DEF_ "CANoeStartDelay" 0;
+BA_DEF_DEF_ "CANoeJitterMin" 0;
+BA_DEF_DEF_ "CANoeJitterMax" 0;
+BA_DEF_DEF_ "CANoeDrift" 0;
+BA_DEF_DEF_ "J1939MultiPgBroadcastType" "FEFF";
+BA_DEF_DEF_ "J1939MultiPgSizeThreshold" 56;
+BA_DEF_DEF_ "J1939MultiPgSendTimeout" 2;
+BA_DEF_DEF_ "NmJ1939AAC" 0;
+BA_DEF_DEF_ "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_ "NmJ1939System" 0;
+BA_DEF_DEF_ "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_ "NmJ1939Function" 0;
+BA_DEF_DEF_ "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_ "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_ "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_ "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_ "ECU" "";
+BA_DEF_DEF_ "CANFD_CANFD_Gateway" "No";
+BA_DEF_DEF_ "CAN_CANFD_Gateway" "No";
+BA_DEF_DEF_ "CANFD_LIN_Gateway" "No";
+BA_DEF_DEF_ "ECUDisplayName" "";
+BA_DEF_DEF_ "CAN_LIN_Gateway" "No";
+BA_DEF_DEF_ "CAN_CAN_Gateway" "No";
+BA_DEF_DEF_ "BootloaderNode" "No";
+BA_DEF_DEF_ "NmType" "OSEK";
+BA_DEF_DEF_ "VersionYear" 2019;
+BA_DEF_DEF_ "VersionNumber" 0;
+BA_DEF_DEF_ "VersionMonth" 0;
+BA_DEF_DEF_ "VersionDay" 0;
+BA_DEF_DEF_ "ProtocolType" "CAN";
+BA_DEF_DEF_ "NmMessageCount" 128;
+BA_DEF_DEF_ "NmBaseAddress" 1024;
+BA_DEF_DEF_ "Manufacturer" "";
+BA_DEF_DEF_ "ILTxTimeout" 0;
+BA_DEF_DEF_ "DBName" "";
+BA_DEF_DEF_ "BusType" "";
+BA_DEF_DEF_ "Baudrate" 500000;
+BA_DEF_DEF_ "SAE_J1939_DA_SpecVersion" "";
+BA_DEF_DEF_ "SAE_J1939_81_SpecVersion" "";
+BA_DEF_DEF_ "DatabaseVersion" "";
+BA_DEF_DEF_ "SAE_J1939_21_SpecVersion" "";
+BA_DEF_DEF_ "GenSigInvalidValue" 0;
+BA_DEF_DEF_ "GenSigStartValue" 0;
+BA_DEF_DEF_ "GenSigInactiveValue" 0;
+BA_DEF_DEF_ "GenSigRoutingTimeoutValue" 0;
+BA_DEF_DEF_ "GenSigSendType" "Cycle";
+BA_DEF_DEF_ "SPN" 0;
+BA_DEF_DEF_ "E2EProfile" "";
+BA_DEF_DEF_ "ASIL" "";
+BA_DEF_DEF_ "GenSigDataID" "";
+BA_DEF_DEF_ "SigType" "Default";
+BA_DEF_DEF_ "GenSigILSupport" "Yes";
+BA_DEF_DEF_ "GenSigEVName" "Env@Nodename_@Signame";
+BA_ "BusType" "CAN";
+BA_ "ProtocolType" "J1939";
+BA_ "DBName" "Matrix";
+BA_ "Baudrate" 500000;
+BA_ "GenMsgCycleTime" BO_ 2566892165 500;
+BA_ "GenMsgSendType" BO_ 2566892165 0;
+BA_ "VFrameFormat" BO_ 2566892165 1;
+BA_ "GenMsgCycleTime" BO_ 2566872532 100;
+BA_ "GenMsgSendType" BO_ 2566872532 0;
+BA_ "VFrameFormat" BO_ 2566872532 1;
+BA_ "GenMsgCycleTime" BO_ 2566872533 100;
+BA_ "GenMsgSendType" BO_ 2566872533 0;
+BA_ "VFrameFormat" BO_ 2566872533 1;
+BA_ "GenMsgCycleTime" BO_ 2566853359 50;
+BA_ "GenMsgSendType" BO_ 2566853359 0;
+BA_ "VFrameFormat" BO_ 2566853359 1;
+BA_ "GenMsgCycleTime" BO_ 2566853615 100;
+BA_ "GenMsgSendType" BO_ 2566853615 0;
+BA_ "VFrameFormat" BO_ 2566853615 1;
+BA_ "GenMsgCycleTime" BO_ 2565866755 100;
+BA_ "GenMsgSendType" BO_ 2565866755 0;
+BA_ "VFrameFormat" BO_ 2565866755 1;
+BA_ "GenMsgCycleTime" BO_ 2566861351 20;
+BA_ "GenMsgSendType" BO_ 2566861351 0;
+BA_ "VFrameFormat" BO_ 2566861351 1;
+BA_ "GenMsgCycleTime" BO_ 2566861607 50;
+BA_ "GenMsgCycleTimeFast" BO_ 2566861607 20;
+BA_ "GenMsgSendType" BO_ 2566861607 0;
+BA_ "VFrameFormat" BO_ 2566861607 1;
+BA_ "GenMsgNrOfRepetition" BO_ 2365443105 3;
+BA_ "GenMsgCycleTime" BO_ 2365443105 1000;
+BA_ "GenMsgCycleTimeFast" BO_ 2365443105 100;
+BA_ "GenMsgSendType" BO_ 2365443105 5;
+BA_ "VFrameFormat" BO_ 2365443105 1;
+BA_ "GenMsgCycleTime" BO_ 2566875236 100;
+BA_ "GenMsgSendType" BO_ 2566875236 0;
+BA_ "VFrameFormat" BO_ 2566875236 1;
+BA_ "GenMsgCycleTime" BO_ 2566842094 2000;
+BA_ "GenMsgSendType" BO_ 2566842094 0;
+BA_ "VFrameFormat" BO_ 2566842094 1;
+BA_ "GenMsgCycleTime" BO_ 2566832622 1000;
+BA_ "GenMsgSendType" BO_ 2566832622 0;
+BA_ "VFrameFormat" BO_ 2566832622 1;
+BA_ "GenMsgNrOfRepetition" BO_ 2566900119 3;
+BA_ "GenMsgCycleTime" BO_ 2566900119 500;
+BA_ "GenMsgCycleTimeFast" BO_ 2566900119 50;
+BA_ "GenMsgSendType" BO_ 2566900119 5;
+BA_ "VFrameFormat" BO_ 2566900119 1;
+BA_ "GenMsgNrOfRepetition" BO_ 2566900371 3;
+BA_ "GenMsgCycleTime" BO_ 2566900371 500;
+BA_ "GenMsgCycleTimeFast" BO_ 2566900371 50;
+BA_ "GenMsgSendType" BO_ 2566900371 5;
+BA_ "VFrameFormat" BO_ 2566900371 1;
+BA_ "GenMsgNrOfRepetition" BO_ 2566900372 3;
+BA_ "GenMsgCycleTime" BO_ 2566900372 500;
+BA_ "GenMsgCycleTimeFast" BO_ 2566900372 50;
+BA_ "GenMsgSendType" BO_ 2566900372 5;
+BA_ "VFrameFormat" BO_ 2566900372 1;
+BA_ "GenMsgCycleTime" BO_ 2565867787 10;
+BA_ "GenMsgSendType" BO_ 2565867787 0;
+BA_ "VFrameFormat" BO_ 2565867787 1;
+BA_ "GenMsgCycleTime" BO_ 2566872611 100;
+BA_ "GenMsgSendType" BO_ 2566872611 0;
+BA_ "VFrameFormat" BO_ 2566872611 1;
+BA_ "GenMsgCycleTime" BO_ 2566859752 50;
+BA_ "GenMsgSendType" BO_ 2566859752 0;
+BA_ "VFrameFormat" BO_ 2566859752 1;
+BA_ "GenMsgCycleTime" BO_ 2566878624 100;
+BA_ "GenMsgSendType" BO_ 2566878624 0;
+BA_ "VFrameFormat" BO_ 2566878624 1;
+BA_ "GenMsgCycleTime" BO_ 2566878880 100;
+BA_ "GenMsgSendType" BO_ 2566878880 0;
+BA_ "VFrameFormat" BO_ 2566878880 1;
+BA_ "GenMsgCycleTime" BO_ 2566879136 100;
+BA_ "GenMsgSendType" BO_ 2566879136 0;
+BA_ "VFrameFormat" BO_ 2566879136 1;
+BA_ "GenMsgCycleTime" BO_ 2566879392 100;
+BA_ "GenMsgSendType" BO_ 2566879392 0;
+BA_ "VFrameFormat" BO_ 2566879392 1;
+BA_ "GenMsgCycleTime" BO_ 2566879648 100;
+BA_ "GenMsgSendType" BO_ 2566879648 0;
+BA_ "VFrameFormat" BO_ 2566879648 1;
+BA_ "GenMsgCycleTime" BO_ 2566879904 100;
+BA_ "GenMsgSendType" BO_ 2566879904 0;
+BA_ "VFrameFormat" BO_ 2566879904 1;
+BA_ "GenMsgCycleTime" BO_ 2566880160 100;
+BA_ "GenMsgSendType" BO_ 2566880160 0;
+BA_ "VFrameFormat" BO_ 2566880160 1;
+BA_ "GenMsgCycleTime" BO_ 2566880416 100;
+BA_ "GenMsgSendType" BO_ 2566880416 0;
+BA_ "VFrameFormat" BO_ 2566880416 1;
+BA_ "GenMsgCycleTime" BO_ 2566869400 50;
+BA_ "GenMsgSendType" BO_ 2566869400 0;
+BA_ "VFrameFormat" BO_ 2566869400 1;
+BA_ "GenMsgCycleTime" BO_ 2566869657 50;
+BA_ "GenMsgSendType" BO_ 2566869657 0;
+BA_ "VFrameFormat" BO_ 2566869657 1;
+BA_ "GenSigStartValue" SG_ 2566892165 WCM1_key_status 0;
+BA_ "GenSigSendType" SG_ 2566892165 WCM1_key_status 0;
+BA_ "GenSigStartValue" SG_ 2566892165 WCM1_charge_status 0;
+BA_ "GenSigSendType" SG_ 2566892165 WCM1_charge_status 0;
+BA_ "GenSigStartValue" SG_ 2566892165 WCM1_fault_status 0;
+BA_ "GenSigSendType" SG_ 2566892165 WCM1_fault_status 0;
+BA_ "GenSigStartValue" SG_ 2566892165 WCM1_phone_reminder 0;
+BA_ "GenSigSendType" SG_ 2566892165 WCM1_phone_reminder 0;
+BA_ "SPN" SG_ 2566872532 LCM_L_St_RunningLight 2404;
+BA_ "GenSigInvalidValue" SG_ 2566872532 LCM_L_St_RunningLight 3;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_St_RunningLight 3;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_St_RunningLight 0;
+BA_ "SPN" SG_ 2566872532 LCM_L_St_LeftTurnLight 2368;
+BA_ "GenSigInvalidValue" SG_ 2566872532 LCM_L_St_LeftTurnLight 3;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_St_LeftTurnLight 3;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_St_LeftTurnLight 0;
+BA_ "SPN" SG_ 2566872532 LCM_L_St_TractorMarkerLight 2378;
+BA_ "GenSigInvalidValue" SG_ 2566872532 LCM_L_St_TractorMarkerLight 3;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_St_TractorMarkerLight 3;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_St_TractorMarkerLight 0;
+BA_ "GenSigInvalidValue" SG_ 2566872532 LCM_L_St_LampFlicker 15;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_St_LampFlicker 15;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_St_LampFlicker 0;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_F_OverVoltage 0;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_F_OverVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_F_UnderVoltage 0;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_F_UnderVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_F_RunningLight 0;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_F_RunningLight 0;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_F_LeftTurnLight 0;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_F_LeftTurnLight 0;
+BA_ "GenSigStartValue" SG_ 2566872532 LCM_L_F_TractorMarkerLight 0;
+BA_ "GenSigSendType" SG_ 2566872532 LCM_L_F_TractorMarkerLight 0;
+BA_ "SPN" SG_ 2566872533 LCM_R_St_RunningLight 2404;
+BA_ "GenSigInvalidValue" SG_ 2566872533 LCM_R_St_RunningLight 3;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_St_RunningLight 3;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_St_RunningLight 0;
+BA_ "SPN" SG_ 2566872533 LCM_R_St_RightTurnLight 2370;
+BA_ "GenSigInvalidValue" SG_ 2566872533 LCM_R_St_RightTurnLight 3;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_St_RightTurnLight 3;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_St_RightTurnLight 0;
+BA_ "SPN" SG_ 2566872533 LCM_R_St_TractorMarkerLight 2378;
+BA_ "GenSigInvalidValue" SG_ 2566872533 LCM_R_St_TractorMarkerLight 3;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_St_TractorMarkerLight 3;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_St_TractorMarkerLight 0;
+BA_ "GenSigInvalidValue" SG_ 2566872533 LCM_R_St_LampFlicker 15;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_St_LampFlicker 15;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_St_LampFlicker 0;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_F_OverVoltage 0;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_F_OverVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_F_UnderVoltage 0;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_F_UnderVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_F_RunningLight 0;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_F_RunningLight 0;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_F_LeftTurnLight 0;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_F_LeftTurnLight 0;
+BA_ "GenSigStartValue" SG_ 2566872533 LCM_R_F_TractorMarkerLight 0;
+BA_ "GenSigSendType" SG_ 2566872533 LCM_R_F_TractorMarkerLight 0;
+BA_ "ASIL" SG_ 2566853359 VBUS_VCU4_N_VehicleSpeed "B";
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_N_VehicleSpeed 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_N_AverageConsumedPower 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_Gears 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_Ready 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_Vehicle 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_Interlocking 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_ShiftGearBrkOn 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_F_ShiftGears 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_F_ShiftGears 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_F_Motor 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_F_MotorOverTemp 0;
+BA_ "GenSigStartValue" SG_ 2566853359 VBUS_VCU4_St_DISCHARGE_STA 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_DISCHARGE_STA 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_N_EVRemainDriverRange 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_BrakeSta 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_St_Thermal_runaway 0;
+BA_ "GenSigSendType" SG_ 2566853359 VBUS_VCU4_RollingCounter 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_N_DCVoltage 0;
+BA_ "GenSigStartValue" SG_ 2566853615 VBUS_VCU5_N_DCCurrent 10000;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_N_DCCurrent 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_N_SOC 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_LowSOC 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_BatteryCHGHeating 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_F_Battery 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_F_OverTemperature 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_F_LVBattVoltageLow 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_HVDisConnect 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_F_Isolation 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_ChargerIndicator 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_ChargerLine 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_EnergyFlow 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_ChargeMode 0;
+BA_ "GenSigSendType" SG_ 2566853615 VBUS_VCU5_St_PowerReduceOperation 0;
+BA_ "SPN" SG_ 2565866755 TransSelectedGear 524;
+BA_ "GenSigSendType" SG_ 2565866755 TransSelectedGear 0;
+BA_ "SPN" SG_ 2565866755 TransActGearRatio 526;
+BA_ "GenSigStartValue" SG_ 2565866755 TransActGearRatio 0;
+BA_ "GenSigSendType" SG_ 2565866755 TransActGearRatio 0;
+BA_ "SPN" SG_ 2565866755 TransCurrentGear 523;
+BA_ "GenSigSendType" SG_ 2565866755 TransCurrentGear 0;
+BA_ "GenSigStartValue" SG_ 2566861351 LeftTurnLightReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 LeftTurnLightReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 RightTurnLightReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 RightTurnLightReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 HzrdLightReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 HzrdLightReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 LowBeamReq 0;
+BA_ "ASIL" SG_ 2566861351 LowBeamReq "B";
+BA_ "GenSigSendType" SG_ 2566861351 LowBeamReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 HighBeamReq 0;
+BA_ "ASIL" SG_ 2566861351 HighBeamReq "A";
+BA_ "GenSigSendType" SG_ 2566861351 HighBeamReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 ReverseLampReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 ReverseLampReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 MainBrkLightReq 0;
+BA_ "ASIL" SG_ 2566861351 MainBrkLightReq "B";
+BA_ "GenSigSendType" SG_ 2566861351 MainBrkLightReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 TrailerBrkLightReq 0;
+BA_ "ASIL" SG_ 2566861351 TrailerBrkLightReq "B";
+BA_ "GenSigSendType" SG_ 2566861351 TrailerBrkLightReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 PosnLightReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 PosnLightReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 BacklightAdjustReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 BacklightAdjustReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 LeftDayTimeRunngLiReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 LeftDayTimeRunngLiReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 RightDayTimeRunngLiReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 RightDayTimeRunngLiReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 RearFogLampReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 RearFogLampReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 RearFogLampReplcmtReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 RearFogLampReplcmtReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 LanternLanguageReq 0;
+BA_ "GenSigSendType" SG_ 2566861351 LanternLanguageReq 0;
+BA_ "GenSigStartValue" SG_ 2566861351 LampFollowMeHomeSetSts 0;
+BA_ "GenSigSendType" SG_ 2566861351 LampFollowMeHomeSetSts 0;
+BA_ "GenSigStartValue" SG_ 2566861351 LampAwayHomeSetSts 0;
+BA_ "GenSigSendType" SG_ 2566861351 LampAwayHomeSetSts 0;
+BA_ "GenSigStartValue" SG_ 2566861351 ExtrMirrHeatCtrl 0;
+BA_ "GenSigSendType" SG_ 2566861351 ExtrMirrHeatCtrl 0;
+BA_ "GenSigStartValue" SG_ 2566861351 ExtrMirrDirAdjmtCtrl_L 0;
+BA_ "GenSigSendType" SG_ 2566861351 ExtrMirrDirAdjmtCtrl_L 0;
+BA_ "GenSigStartValue" SG_ 2566861351 ExtrMirrDirAdjmtCtrl_R 0;
+BA_ "GenSigSendType" SG_ 2566861351 ExtrMirrDirAdjmtCtrl_R 0;
+BA_ "GenSigStartValue" SG_ 2566861351 FrontFogLampReq_L 0;
+BA_ "GenSigSendType" SG_ 2566861351 FrontFogLampReq_L 0;
+BA_ "GenSigStartValue" SG_ 2566861351 FrontFogLampReq_R 0;
+BA_ "GenSigSendType" SG_ 2566861351 FrontFogLampReq_R 0;
+BA_ "GenSigStartValue" SG_ 2566861607 WinReq_L 0;
+BA_ "GenSigSendType" SG_ 2566861607 WinReq_L 0;
+BA_ "GenSigStartValue" SG_ 2566861607 WinReq_R 0;
+BA_ "GenSigSendType" SG_ 2566861607 WinReq_R 0;
+BA_ "GenSigStartValue" SG_ 2566861607 WasherReq 0;
+BA_ "GenSigSendType" SG_ 2566861607 WasherReq 0;
+BA_ "GenSigStartValue" SG_ 2566861607 WiperReq 0;
+BA_ "ASIL" SG_ 2566861607 WiperReq "A";
+BA_ "GenSigSendType" SG_ 2566861607 WiperReq 0;
+BA_ "GenSigStartValue" SG_ 2566861607 StartStopButtonLiReq 0;
+BA_ "GenSigSendType" SG_ 2566861607 StartStopButtonLiReq 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RelayReq_ACC 0;
+BA_ "GenSigSendType" SG_ 2566861607 RelayReq_ACC 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RelayReq_IG1 0;
+BA_ "GenSigSendType" SG_ 2566861607 RelayReq_IG1 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RelayReq_IG2 0;
+BA_ "GenSigSendType" SG_ 2566861607 RelayReq_IG2 0;
+BA_ "GenSigStartValue" SG_ 2566861607 CrankReq 0;
+BA_ "GenSigSendType" SG_ 2566861607 CrankReq 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RelaySts_ACC 0;
+BA_ "GenSigSendType" SG_ 2566861607 RelaySts_ACC 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RelaySts_IG1 0;
+BA_ "GenSigSendType" SG_ 2566861607 RelaySts_IG1 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RelaySts_IG2 0;
+BA_ "GenSigSendType" SG_ 2566861607 RelaySts_IG2 0;
+BA_ "GenSigStartValue" SG_ 2566861607 LowPowerMode 0;
+BA_ "ASIL" SG_ 2566861607 LowPowerMode "B";
+BA_ "GenSigSendType" SG_ 2566861607 LowPowerMode 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RmtLowPowerMode 0;
+BA_ "GenSigSendType" SG_ 2566861607 RmtLowPowerMode 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RainCloseWinSwt_Fb 0;
+BA_ "GenSigSendType" SG_ 2566861607 RainCloseWinSwt_Fb 0;
+BA_ "GenSigStartValue" SG_ 2566861607 RmtLocaloutreq 0;
+BA_ "GenSigSendType" SG_ 2566861607 RmtLocaloutreq 0;
+BA_ "GenSigStartValue" SG_ 2566861607 BluetoothKeyConnect 0;
+BA_ "GenSigSendType" SG_ 2566861607 BluetoothKeyConnect 0;
+BA_ "GenSigStartValue" SG_ 2566861607 BluetoothKeyConnectAuthe 0;
+BA_ "GenSigSendType" SG_ 2566861607 BluetoothKeyConnectAuthe 0;
+BA_ "GenSigStartValue" SG_ 2566861607 BluetoothKeyLocation 0;
+BA_ "GenSigSendType" SG_ 2566861607 BluetoothKeyLocation 0;
+BA_ "GenSigStartValue" SG_ 2566861607 BluetoothKeyReq 0;
+BA_ "GenSigSendType" SG_ 2566861607 BluetoothKeyReq 0;
+BA_ "GenSigStartValue" SG_ 2566861607 BluetoothPhoneConnect 0;
+BA_ "GenSigSendType" SG_ 2566861607 BluetoothPhoneConnect 0;
+BA_ "GenSigStartValue" SG_ 2566861607 PrimaryAntennaSleepCom 0;
+BA_ "GenSigSendType" SG_ 2566861607 PrimaryAntennaSleepCom 0;
+BA_ "GenSigStartValue" SG_ 2566861607 DKM_N_EncryptData 0;
+BA_ "GenSigSendType" SG_ 2566861607 DKM_N_EncryptData 0;
+BA_ "SPN" SG_ 2365443105 TurnSignalSwt 2876;
+BA_ "GenSigStartValue" SG_ 2365443105 TurnSignalSwt 0;
+BA_ "GenSigSendType" SG_ 2365443105 TurnSignalSwt 0;
+BA_ "SPN" SG_ 2365443105 HighBeamSwt 2874;
+BA_ "GenSigStartValue" SG_ 2365443105 HighBeamSwt 0;
+BA_ "ASIL" SG_ 2365443105 HighBeamSwt "A";
+BA_ "GenSigSendType" SG_ 2365443105 HighBeamSwt 0;
+BA_ "GenSigStartValue" SG_ 2365443105 OvertakinglampSwt 0;
+BA_ "ASIL" SG_ 2365443105 OvertakinglampSwt "A";
+BA_ "GenSigSendType" SG_ 2365443105 OvertakinglampSwt 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_MasterLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_MasterLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_SleeperLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_SleeperLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_RkeLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_RkeLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_RemoteLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_RemoteLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_AutoReLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_AutoReLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_PkeLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_PkeLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_CrashLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_CrashLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_DKMLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_DKMLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockSource_Insd_Outd 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockSource_Insd_Outd 0;
+BA_ "GenSigStartValue" SG_ 2566875236 Lock_Unlock_SucessFb 0;
+BA_ "GenSigSendType" SG_ 2566875236 Lock_Unlock_SucessFb 0;
+BA_ "GenSigStartValue" SG_ 2566875236 PlayPrevnSts_LPKE_Unlock 0;
+BA_ "GenSigSendType" SG_ 2566875236 PlayPrevnSts_LPKE_Unlock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 PlayPrevnSts_LPKE_Lock 0;
+BA_ "GenSigSendType" SG_ 2566875236 PlayPrevnSts_LPKE_Lock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 PlayPrevnSts_RPKE_Unlock 0;
+BA_ "GenSigSendType" SG_ 2566875236 PlayPrevnSts_RPKE_Unlock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 PlayPrevnSts_RPKE_Lock 0;
+BA_ "GenSigSendType" SG_ 2566875236 PlayPrevnSts_RPKE_Lock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 CentralLockSw 0;
+BA_ "GenSigSendType" SG_ 2566875236 CentralLockSw 0;
+BA_ "GenSigStartValue" SG_ 2566875236 AutoUnlockReq 0;
+BA_ "GenSigSendType" SG_ 2566875236 AutoUnlockReq 0;
+BA_ "GenSigStartValue" SG_ 2566875236 SpeedReqLock 0;
+BA_ "GenSigSendType" SG_ 2566875236 SpeedReqLock 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockUnlockReq_L 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockUnlockReq_L 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockUnlockReq_R 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockUnlockReq_R 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockOverheatProtection_L 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockOverheatProtection_L 0;
+BA_ "GenSigStartValue" SG_ 2566875236 LockOverheatProtection_R 0;
+BA_ "GenSigSendType" SG_ 2566875236 LockOverheatProtection_R 0;
+BA_ "GenSigStartValue" SG_ 2566875236 PlayPrevnSts_LPKE 0;
+BA_ "GenSigSendType" SG_ 2566875236 PlayPrevnSts_LPKE 0;
+BA_ "GenSigStartValue" SG_ 2566875236 PlayPrevnSts_RPKE 0;
+BA_ "GenSigSendType" SG_ 2566875236 PlayPrevnSts_RPKE 0;
+BA_ "GenSigStartValue" SG_ 2566875236 RearFogLightSts 0;
+BA_ "GenSigSendType" SG_ 2566875236 RearFogLightSts 0;
+BA_ "GenSigStartValue" SG_ 2566875236 RearFogLightFltMode 0;
+BA_ "GenSigSendType" SG_ 2566875236 RearFogLightFltMode 0;
+BA_ "GenSigStartValue" SG_ 2566875236 RearFogLightSts_T 0;
+BA_ "GenSigSendType" SG_ 2566875236 RearFogLightSts_T 0;
+BA_ "GenSigStartValue" SG_ 2566875236 RearFogLightFltMode_T 0;
+BA_ "GenSigSendType" SG_ 2566875236 RearFogLightFltMode_T 0;
+BA_ "GenSigStartValue" SG_ 2566875236 ExtrMirrHozlAdjMotorSts_R 0;
+BA_ "GenSigSendType" SG_ 2566875236 ExtrMirrHozlAdjMotorSts_R 0;
+BA_ "GenSigStartValue" SG_ 2566875236 ExtrMirrVertAdjMotorSts_R 0;
+BA_ "GenSigSendType" SG_ 2566875236 ExtrMirrVertAdjMotorSts_R 0;
+BA_ "GenSigStartValue" SG_ 2566875236 ExtrMirrHozlAdjMotorSts_L 0;
+BA_ "GenSigSendType" SG_ 2566875236 ExtrMirrHozlAdjMotorSts_L 0;
+BA_ "GenSigStartValue" SG_ 2566875236 ExtrMirrVertAdjMotorSts_L 0;
+BA_ "GenSigSendType" SG_ 2566875236 ExtrMirrVertAdjMotorSts_L 0;
+BA_ "GenSigStartValue" SG_ 2566875236 MainBrkLightSts 0;
+BA_ "GenSigSendType" SG_ 2566875236 MainBrkLightSts 0;
+BA_ "GenSigStartValue" SG_ 2566875236 TrailerBrkLightSts 0;
+BA_ "GenSigSendType" SG_ 2566875236 TrailerBrkLightSts 0;
+BA_ "GenSigStartValue" SG_ 2566875236 MainBrkLightFltMode 0;
+BA_ "GenSigSendType" SG_ 2566875236 MainBrkLightFltMode 0;
+BA_ "GenSigStartValue" SG_ 2566875236 TrailerBrkLightFltMode 0;
+BA_ "GenSigSendType" SG_ 2566875236 TrailerBrkLightFltMode 0;
+BA_ "SPN" SG_ 2566842094 Seconds 959;
+BA_ "GenSigSendType" SG_ 2566842094 Seconds 0;
+BA_ "SPN" SG_ 2566842094 Minutes 960;
+BA_ "GenSigSendType" SG_ 2566842094 Minutes 0;
+BA_ "SPN" SG_ 2566842094 Hours 961;
+BA_ "GenSigSendType" SG_ 2566842094 Hours 0;
+BA_ "SPN" SG_ 2566842094 Month 963;
+BA_ "GenSigSendType" SG_ 2566842094 Month 0;
+BA_ "SPN" SG_ 2566842094 Day 962;
+BA_ "GenSigSendType" SG_ 2566842094 Day 0;
+BA_ "SPN" SG_ 2566842094 Year 964;
+BA_ "GenSigSendType" SG_ 2566842094 Year 0;
+BA_ "SPN" SG_ 2566842094 LocalMinuteOffset 1601;
+BA_ "GenSigSendType" SG_ 2566842094 LocalMinuteOffset 0;
+BA_ "SPN" SG_ 2566842094 LocalHourOffset 1602;
+BA_ "GenSigSendType" SG_ 2566842094 LocalHourOffset 0;
+BA_ "SPN" SG_ 2566832622 HighResolutionTotalVehicleDistance 917;
+BA_ "GenSigStartValue" SG_ 2566832622 HighResolutionTotalVehicleDistance 0;
+BA_ "GenSigSendType" SG_ 2566832622 HighResolutionTotalVehicleDistance 0;
+BA_ "SPN" SG_ 2566832622 HighResolutionTripDistance 918;
+BA_ "GenSigStartValue" SG_ 2566832622 HighResolutionTripDistance 0;
+BA_ "GenSigSendType" SG_ 2566832622 HighResolutionTripDistance 0;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_HornShiftSwitch 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_HornShiftSwitch 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_VehLockRemindSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_VehLockRemindSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_LampFollowMeHomeSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_LampFollowMeHomeSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_LampAwayHomeSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_LampAwayHomeSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_FindMyCarSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_FindMyCarSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_SmartWelcomeSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_SmartWelcomeSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_LogoLightSwitch 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_LogoLightSwitch 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_ADBSwitch 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_ADBSwitch 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_RainAutoCloseWinSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_RainAutoCloseWinSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_LockAutoCloseWinSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_LockAutoCloseWinSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_UnlockSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_UnlockSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_SpeedAutoLockSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_SpeedAutoLockSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_StopAutoUnlockSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_StopAutoUnlockSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_ApproachAutoUnlockSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_ApproachAutoUnlockSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_AwayAutoLockSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_AwayAutoLockSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_SpeedLimitSet_Sleeper 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_SpeedLimitSet_Sleeper 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_PDMMaxOpeningSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_PDMMaxOpeningSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_PDMOpenSoundSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_PDMOpenSoundSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_PDMOpenSpeedSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_PDMOpenSpeedSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_WCMEnableSwitch 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_WCMEnableSwitch 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_LockSetReq 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_LockSetReq 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_BackLightBriSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_BackLightBriSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 CeilingLightSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 CeilingLightSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_VoiceCtrlFlag_Body2 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_VoiceCtrlFlag_Body2 0;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_VSPOpenSet 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_VSPOpenSet 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_DomeLightSwt 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_DomeLightSwt 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_DomeLightSwt_R 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_DomeLightSwt_R 4;
+BA_ "GenSigStartValue" SG_ 2566900119 IVI_DomeLightSwt_Door 0;
+BA_ "GenSigSendType" SG_ 2566900119 IVI_DomeLightSwt_Door 4;
+BA_ "GenSigStartValue" SG_ 2566900371 LOG_LogoLightSet_Sts 0;
+BA_ "GenSigSendType" SG_ 2566900371 LOG_LogoLightSet_Sts 4;
+BA_ "GenSigStartValue" SG_ 2566900372 HLCM_M_Set_Sts 0;
+BA_ "GenSigSendType" SG_ 2566900372 HLCM_M_Set_Sts 4;
+BA_ "SPN" SG_ 2565867787 SteerWheelAngle_18F0090B 1807;
+BA_ "GenSigSendType" SG_ 2565867787 SteerWheelAngle_18F0090B 0;
+BA_ "SPN" SG_ 2565867787 SteerWheelTurnCounter 1811;
+BA_ "GenSigSendType" SG_ 2565867787 SteerWheelTurnCounter 0;
+BA_ "SPN" SG_ 2565867787 SteerWheelAngleSensorType 1812;
+BA_ "GenSigSendType" SG_ 2565867787 SteerWheelAngleSensorType 0;
+BA_ "SPN" SG_ 2565867787 YawRate 1808;
+BA_ "GenSigSendType" SG_ 2565867787 YawRate 0;
+BA_ "SPN" SG_ 2565867787 LateralAcceleration 1809;
+BA_ "GenSigSendType" SG_ 2565867787 LateralAcceleration 0;
+BA_ "SPN" SG_ 2565867787 LongitudinalAcceleration 1810;
+BA_ "GenSigSendType" SG_ 2565867787 LongitudinalAcceleration 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_RQ_WiperSPD 0;
+BA_ "ASIL" SG_ 2566872611 RLS_RQ_WiperSPD "A";
+BA_ "GenSigSendType" SG_ 2566872611 RLS_RQ_WiperSPD 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_RQ_LowBeam 0;
+BA_ "ASIL" SG_ 2566872611 RLS_RQ_LowBeam "B";
+BA_ "GenSigSendType" SG_ 2566872611 RLS_RQ_LowBeam 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_RQ_PositionLamp 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_RQ_PositionLamp 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_Fault_Rain 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_Fault_Rain 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_Fault_Light 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_Fault_Light 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_REP_Error 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_REP_Error 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_VOLT_Error 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_VOLT_Error 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_Brightness_FW 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_Brightness_FW 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_Rain_Intensity 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_Rain_Intensity 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_BigLamp_Threshold_Nr 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_BigLamp_Threshold_Nr 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_RainCloseWin_Str 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_RainCloseWin_Str 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_WiperSPD_FuncErr 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_WiperSPD_FuncErr 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_RQ_LowBeam_FuncErr 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_RQ_LowBeam_FuncErr 0;
+BA_ "GenSigStartValue" SG_ 2566872611 RLS_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566872611 RLS_CheckSum 0;
+BA_ "SPN" SG_ 2566859752 LowBeamSwRq 2349;
+BA_ "GenSigSendType" SG_ 2566859752 LowBeamSwRq 0;
+BA_ "SPN" SG_ 2566859752 HighBeamSwRq 2347;
+BA_ "GenSigSendType" SG_ 2566859752 HighBeamSwRq 0;
+BA_ "GenSigSendType" SG_ 2566859752 FCW_Switch_Fdk 0;
+BA_ "GenSigSendType" SG_ 2566859752 FCW_Sensitivity_Fdk 0;
+BA_ "GenSigSendType" SG_ 2566859752 LDW_Switch_Fdk 0;
+BA_ "GenSigSendType" SG_ 2566859752 LDW_Sensitivity_Fdk 0;
+BA_ "GenSigSendType" SG_ 2566859752 IHBC_Status 0;
+BA_ "GenSigSendType" SG_ 2566859752 SLI_Status 0;
+BA_ "GenSigSendType" SG_ 2566859752 SLIF_Status 0;
+BA_ "GenSigSendType" SG_ 2566859752 SLIF_Warning 0;
+BA_ "GenSigSendType" SG_ 2566859752 Sign_Speedlimit 0;
+BA_ "GenSigSendType" SG_ 2566859752 Sign_SpeedLimitCancelled 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FCS_01_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566878624 FCS_01_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FCS_01_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566878624 FCS_01_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FCS_01_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566878624 FCS_01_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FCS_01_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566878624 FCS_01_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FRS_01_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566878624 FRS_01_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FCS_01_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566878624 FCS_01_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FCS_01_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566878624 FCS_01_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566878624 FRS_01_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566878624 FRS_01_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FCS_02_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566878880 FCS_02_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FCS_02_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566878880 FCS_02_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FCS_02_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566878880 FCS_02_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FCS_02_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566878880 FCS_02_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FRS_02_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566878880 FRS_02_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FCS_02_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566878880 FCS_02_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FCS_02_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566878880 FCS_02_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566878880 FRS_02_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566878880 FRS_02_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FCS_03_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566879136 FCS_03_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FCS_03_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566879136 FCS_03_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FCS_03_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566879136 FCS_03_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FCS_03_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566879136 FCS_03_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FRS_03_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566879136 FRS_03_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FCS_03_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566879136 FCS_03_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FCS_03_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566879136 FCS_03_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566879136 FRS_03_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566879136 FRS_03_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FCS_04_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566879392 FCS_04_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FCS_04_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566879392 FCS_04_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FCS_04_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566879392 FCS_04_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FCS_04_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566879392 FCS_04_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FRS_04_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566879392 FRS_04_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FCS_04_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566879392 FCS_04_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FCS_04_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566879392 FCS_04_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566879392 FRS_04_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566879392 FRS_04_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FCS_05_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566879648 FCS_05_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FCS_05_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566879648 FCS_05_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FCS_05_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566879648 FCS_05_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FCS_05_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566879648 FCS_05_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FRS_05_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566879648 FRS_05_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FCS_05_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566879648 FCS_05_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FCS_05_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566879648 FCS_05_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566879648 FRS_05_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566879648 FRS_05_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FCS_06_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566879904 FCS_06_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FCS_06_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566879904 FCS_06_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FCS_06_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566879904 FCS_06_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FCS_06_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566879904 FCS_06_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FRS_06_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566879904 FRS_06_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FCS_06_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566879904 FCS_06_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FCS_06_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566879904 FCS_06_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566879904 FRS_06_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566879904 FRS_06_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FCS_07_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566880160 FCS_07_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FCS_07_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566880160 FCS_07_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FCS_07_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566880160 FCS_07_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FCS_07_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566880160 FCS_07_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FRS_07_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566880160 FRS_07_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FCS_07_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566880160 FCS_07_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FCS_07_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566880160 FCS_07_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566880160 FRS_07_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566880160 FRS_07_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FCS_08_Obj_Motion_Category 0;
+BA_ "GenSigSendType" SG_ 2566880416 FCS_08_Obj_Motion_Category 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FCS_08_Obj_PosHeadingAng 0;
+BA_ "GenSigSendType" SG_ 2566880416 FCS_08_Obj_PosHeadingAng 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FCS_08_Obj_YPos 4096;
+BA_ "GenSigSendType" SG_ 2566880416 FCS_08_Obj_YPos 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FCS_08_Obj_Type 0;
+BA_ "GenSigSendType" SG_ 2566880416 FCS_08_Obj_Type 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FRS_08_Obj_XPos 0;
+BA_ "GenSigSendType" SG_ 2566880416 FRS_08_Obj_XPos 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FCS_08_Msg_AliveCounter 0;
+BA_ "GenSigSendType" SG_ 2566880416 FCS_08_Msg_AliveCounter 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FCS_08_Obj_MeasFlag 0;
+BA_ "GenSigSendType" SG_ 2566880416 FCS_08_Obj_MeasFlag 0;
+BA_ "GenSigStartValue" SG_ 2566880416 FRS_08_Msg_CheckSum 0;
+BA_ "GenSigSendType" SG_ 2566880416 FRS_08_Msg_CheckSum 0;
+BA_ "GenSigStartValue" SG_ 2566869400 ADB_L_SwitchSet_Sts 0;
+BA_ "GenSigSendType" SG_ 2566869400 ADB_L_SwitchSet_Sts 0;
+BA_ "GenSigStartValue" SG_ 2566869657 ADB_R_SwitchSet_Sts 0;
+BA_ "GenSigSendType" SG_ 2566869657 ADB_R_SwitchSet_Sts 0;
+VAL_ 2566892165 WCM1_key_status 3 "Reserved" 2 "OFF" 1 "ON" 0 "Initial Value";
+VAL_ 2566892165 WCM1_charge_status 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "WPC Fault" 3 "Charging Completed" 2 "Charging" 1 "Standby" 0 "Initial Value";
+VAL_ 2566892165 WCM1_fault_status 15 "Reserved" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "System Fault" 4 "Over Temperature Protection(OTP)" 3 "Low Voltage Protection(LVP)" 2 "Over Voltage Protection(OVP)" 1 "Foreign Object Detection(FOD)" 0 "No Fault/WPC OFF";
+VAL_ 2566892165 WCM1_phone_reminder 1 "Remind forgotten phone" 0 "No need to remind";
+VAL_ 2566872532 LCM_L_St_RunningLight 3 "NotAvailable" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566872532 LCM_L_St_LeftTurnLight 3 "NotAvailable" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566872532 LCM_L_St_TractorMarkerLight 3 "NotAvailable" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566872532 LCM_L_St_LampFlicker 15 "NotAvailable" 14 "Reserve" 13 "Reserve" 12 "Reserve" 11 "Reserve" 10 "Reserve" 9 "Reserve" 8 "Reserve" 7 "Reserve" 6 "Type6" 5 "Type5" 4 "Type4" 3 "Type3" 2 "Type2" 1 "Type1" 0 "OFF";
+VAL_ 2566872532 LCM_L_F_OverVoltage 1 "Error" 0 "Normal";
+VAL_ 2566872532 LCM_L_F_UnderVoltage 1 "Error" 0 "Normal";
+VAL_ 2566872532 LCM_L_F_RunningLight 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566872532 LCM_L_F_LeftTurnLight 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566872532 LCM_L_F_TractorMarkerLight 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566872533 LCM_R_St_RunningLight 3 "NotAvailable" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566872533 LCM_R_St_RightTurnLight 3 "NotAvailable" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566872533 LCM_R_St_TractorMarkerLight 3 "NotAvailable" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566872533 LCM_R_St_LampFlicker 15 "NotAvailable" 14 "Reserve" 13 "Reserve" 12 "Reserve" 11 "Reserve" 10 "Reserve" 9 "Reserve" 8 "Reserve" 7 "Reserve" 6 "Type6" 5 "Type5" 4 "Type4" 3 "Type3" 2 "Type2" 1 "Type1" 0 "OFF";
+VAL_ 2566872533 LCM_R_F_OverVoltage 1 "Error" 0 "Normal";
+VAL_ 2566872533 LCM_R_F_UnderVoltage 1 "Error" 0 "Normal";
+VAL_ 2566872533 LCM_R_F_RunningLight 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566872533 LCM_R_F_LeftTurnLight 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566872533 LCM_R_F_TractorMarkerLight 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566853359 VBUS_VCU4_St_Gears 3 "保留" 2 "R" 1 "D" 0 "N";
+VAL_ 2566853359 VBUS_VCU4_St_Ready 1 "ready" 0 "not ready";
+VAL_ 2566853359 VBUS_VCU4_St_Vehicle 3 "致命故障（闪烁蜂鸣）" 2 "严重故障（红灯闪烁）" 1 "一般故障（红灯常亮）" 0 "正常;";
+VAL_ 2566853359 VBUS_VCU4_St_Interlocking 1 "互锁" 0 "非互锁";
+VAL_ 2566853359 VBUS_VCU4_St_ShiftGearBrkOn 1 "换挡未踩制动" 0 "换挡已踩制动";
+VAL_ 2566853359 VBUS_VCU4_F_ShiftGears 1 "换挡不成功，挡位指示闪烁" 0 "正常，不闪烁";
+VAL_ 2566853359 VBUS_VCU4_F_Motor 1 "故障" 0 "正常";
+VAL_ 2566853359 VBUS_VCU4_F_MotorOverTemp 1 "故障" 0 "正常";
+VAL_ 2566853359 VBUS_VCU4_St_DISCHARGE_STA 3 "void" 2 "void" 1 "正在放电" 0 "非放电状态";
+VAL_ 2566853359 VBUS_VCU4_St_BrakeSta 1 "已踩制动踏板" 0 "未踩制动踏板";
+VAL_ 2566853359 VBUS_VCU4_St_Thermal_runaway 1 "故障" 0 "正常";
+VAL_ 2566853615 VBUS_VCU5_St_LowSOC 1 "SOC低报警（20%，红灯加蜂鸣）；" 0 "正常；";
+VAL_ 2566853615 VBUS_VCU5_St_BatteryCHGHeating 1 "动力电池充电仅加热模式" 0 "非加热模式";
+VAL_ 2566853615 VBUS_VCU5_F_Battery 1 "故障" 0 "正常";
+VAL_ 2566853615 VBUS_VCU5_F_OverTemperature 1 "故障" 0 "正常";
+VAL_ 2566853615 VBUS_VCU5_F_LVBattVoltageLow 1 "故障" 0 "正常";
+VAL_ 2566853615 VBUS_VCU5_St_HVDisConnect 1 "断开" 0 "连接";
+VAL_ 2566853615 VBUS_VCU5_F_Isolation 1 "故障" 0 "正常";
+VAL_ 2566853615 VBUS_VCU5_St_ChargerIndicator 3 "充电完成（绿灯点亮）" 2 "充电故障（红灯点亮）；" 1 "正在充电（黄灯点亮）；" 0 "非充电状态（默认值，不点灯）；";
+VAL_ 2566853615 VBUS_VCU5_St_ChargerLine 1 "连接中" 0 "未连接（默认值）";
+VAL_ 2566853615 VBUS_VCU5_St_EnergyFlow 3 "故障模式" 2 "能量回收模式" 1 "行驶模式" 0 "停车模式";
+VAL_ 2566853615 VBUS_VCU5_St_ChargeMode 3 "Reserve" 2 "慢充" 1 "快充" 0 "非充电；";
+VAL_ 2566853615 VBUS_VCU5_St_PowerReduceOperation 1 "降功率" 0 "正常";
+VAL_ 2565866755 TransSelectedGear 125 "Neutral";
+VAL_ 2565866755 TransCurrentGear 251 "Park";
+VAL_ 2566861351 LeftTurnLightReq 15 "Invalid" 6 "寻车灯语" 5 "RemoteUnlock(解锁灯语)" 4 "RemoteLock(闭锁灯语)" 3 "变道灯语（预留）" 1 "On Normal(正常)（转向和危报）；" 0 "No Operation/OFF";
+VAL_ 2566861351 RightTurnLightReq 15 "Invalid" 6 "寻车灯语" 5 "RemoteUnlock(解锁灯语)" 4 "RemoteLock(闭锁灯语)" 3 "变道灯语（预留）" 1 "On Normal(正常)（转向和危报）；" 0 "No Operation/OFF";
+VAL_ 2566861351 HzrdLightReq 1 "Hazard(危报灯激活)" 0 "No Hazard(危报灯未激活)";
+VAL_ 2566861351 LowBeamReq 1 "ON" 0 "OFF";
+VAL_ 2566861351 HighBeamReq 1 "ON" 0 "OFF";
+VAL_ 2566861351 ReverseLampReq 1 "ON" 0 "OFF";
+VAL_ 2566861351 MainBrkLightReq 2 "Lamp Flash" 1 "Lamp On" 0 "Lamp Off";
+VAL_ 2566861351 TrailerBrkLightReq 2 "Lamp Flash" 1 "Lamp On" 0 "Lamp Off";
+VAL_ 2566861351 PosnLightReq 1 "ON" 0 "OFF";
+VAL_ 2566861351 BacklightAdjustReq 10 "输出50Hz（TBD）占空比30%~100%波形；" 9 "输出50Hz（TBD）占空比30%~100%波形；" 8 "输出50Hz（TBD）占空比30%~100%波形；" 7 "输出50Hz（TBD）占空比30%~100%波形；" 6 "输出50Hz（TBD）占空比30%~100%波形；" 5 "输出50Hz（TBD）占空比30%~100%波形；" 4 "输出50Hz（TBD）占空比30%~100%波形；" 3 "输出50Hz（TBD）占空比30%~100%波形；" 2 "输出50Hz（TBD）占空比20%波形；" 1 "输出50Hz（TBD）占空比10%波形；" 0 "Invalid(Not Request)";
+VAL_ 2566861351 LeftDayTimeRunngLiReq 1 "ON" 0 "off";
+VAL_ 2566861351 RightDayTimeRunngLiReq 1 "ON" 0 "off";
+VAL_ 2566861351 RearFogLampReq 1 "ON" 0 "off";
+VAL_ 2566861351 RearFogLampReplcmtReq 1 "ON" 0 "OFF";
+VAL_ 2566861351 LanternLanguageReq 15 "NotAvailable" 14 "Reserve" 13 "Reserve" 12 "Reserve" 11 "Reserve" 10 "Reserve" 9 "Reserve" 8 "Reserve" 7 "Reserve" 6 "Type6" 5 "Type5" 4 "Type4" 3 "Type3" 2 "Type2" 1 "Type1" 0 "OFF";
+VAL_ 2566861351 LampFollowMeHomeSetSts 3 "90s" 2 "60s" 1 "30s" 0 "OFF";
+VAL_ 2566861351 LampAwayHomeSetSts 3 "90s" 2 "60s" 1 "30s" 0 "OFF";
+VAL_ 2566861351 ExtrMirrHeatCtrl 2 "ExtrMirrHeatOn" 1 "ExtrMirrHeatOff" 0 "No Req";
+VAL_ 2566861351 ExtrMirrDirAdjmtCtrl_L 4 "TurnRight" 3 "TurnLeft" 2 "TurnDown" 1 "TurnUp" 0 "No Cmd";
+VAL_ 2566861351 ExtrMirrDirAdjmtCtrl_R 4 "TurnRight" 3 "TurnLeft" 2 "TurnDown" 1 "TurnUp" 0 "No Cmd";
+VAL_ 2566861351 FrontFogLampReq_L 1 "ON" 0 "off";
+VAL_ 2566861351 FrontFogLampReq_R 1 "ON" 0 "off";
+VAL_ 2566861607 WinReq_L 3 "无效" 2 "Driver Window down" 1 "Driver Window up" 0 "Driver Window Not Moving";
+VAL_ 2566861607 WinReq_R 3 "无效" 2 "Passenger Window down" 1 "Passenger Window up" 0 "Passenger Window Not Moving";
+VAL_ 2566861607 WasherReq 3 "无效" 2 "Error" 1 "喷淋电机驱动请求" 0 "NOT REQUEST";
+VAL_ 2566861607 WiperReq 7 "预留" 6 "预留" 5 "预留" 4 "预留" 3 "雨刮间歇驱动请求（500ms或2帧）" 2 "雨刮高速驱动请求" 1 "雨刮低速驱动请求" 0 "NOT REQUEST";
+VAL_ 2566861607 StartStopButtonLiReq 2 "Yellow" 1 "Green" 0 "不驱动";
+VAL_ 2566861607 RelayReq_ACC 1 "ON" 0 "OFF";
+VAL_ 2566861607 RelayReq_IG1 1 "ON" 0 "OFF";
+VAL_ 2566861607 RelayReq_IG2 1 "ON" 0 "OFF";
+VAL_ 2566861607 CrankReq 1 "Active" 0 "Inactive";
+VAL_ 2566861607 RelaySts_ACC 1 "Active" 0 "Inactive";
+VAL_ 2566861607 RelaySts_IG1 1 "Active" 0 "Inactive";
+VAL_ 2566861607 RelaySts_IG2 1 "Active" 0 "Inactive";
+VAL_ 2566861607 LowPowerMode 15 "Signal Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Start" 3 "ON" 2 "Reserved" 1 "OFF" 0 "Initial";
+VAL_ 2566861607 RmtLowPowerMode 1 "有效" 0 "无效";
+VAL_ 2566861607 RainCloseWinSwt_Fb 3 "无效" 2 "Error" 1 "ON" 0 "OFF";
+VAL_ 2566861607 RmtLocaloutreq 3 "Reserved" 2 "Reserved" 1 "本地事件触发" 0 "NOT REQUEST";
+VAL_ 2566861607 BluetoothKeyConnect 2 "Reserve" 1 "已连接" 0 "未连接";
+VAL_ 2566861607 BluetoothKeyConnectAuthe 4 "Reserve" 2 "握手超时" 1 "握手成功" 0 "握手失败";
+VAL_ 2566861607 BluetoothKeyLocation 4 "out car（除PE区）" 3 "PE（副驾侧）" 2 "PE（主驾侧）" 1 "PS" 0 "Invalid";
+VAL_ 2566861607 BluetoothKeyReq 15 "Signal Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Lamp Inspection" 5 "Searching Car" 4 "Auto Window Down" 3 "Auto Window Up" 2 "Lock" 1 "Unlock" 0 "Initial";
+VAL_ 2566861607 BluetoothPhoneConnect 3 "Reserve" 2 "Reserve" 1 "已连接" 0 "未连接";
+VAL_ 2566861607 PrimaryAntennaSleepCom 3 "Connection3 TBD" 2 "Connection2 当前在ready&不在P档" 1 "go to sleep" 0 "Connection1wakeup";
+VAL_ 2566861607 DKM_N_EncryptData 2 "Reserved；" 1 "Verification Pass；" 0 "Verification Failed；";
+VAL_ 2365443105 TurnSignalSwt 15 "Not available(do not change)" 14 "Error" 13 "reserved" 12 "reserved" 11 "reserved" 10 "reserved" 9 "reserved" 8 "reserved" 7 "reserved" 6 "reserved" 5 "reserved" 4 "reserved" 3 "reserved" 2 "right turn to be flashing" 1 "Left turn to be flashing" 0 "No Turn being signaled";
+VAL_ 2365443105 HighBeamSwt 3 "Not available(do not change)" 2 "Error" 1 "High Beam selected" 0 "Low Beam selected";
+VAL_ 2365443105 OvertakinglampSwt 3 "Not available(do not change)" 2 "Error" 1 "On" 0 "Off";
+VAL_ 2566875236 LockSource_MasterLock 3 "无效" 2 "CentralUnlockReq；" 1 "CentralLockReq；" 0 "No Action；";
+VAL_ 2566875236 LockSource_SleeperLock 3 "无效" 2 "SleeplUnlockReq；" 1 "SleepLockReq；" 0 "No Action；";
+VAL_ 2566875236 LockSource_RkeLock 15 "Signal Invalid" 14 "Reserved" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Single unlock driver door（单解司机门）" 6 "Lamp Inspection" 5 "Searching Car" 4 "Auto Window Down" 3 "Auto Window Up" 2 "Lock" 1 "Unlock" 0 "Initial";
+VAL_ 2566875236 LockSource_RemoteLock 5 "Reserved；" 4 "RemoteReqLampInspection；" 3 "RemoteReqSearching Car；" 2 "RemotelockReq；" 1 "RemoteUnlockReq；" 0 "No Action；";
+VAL_ 2566875236 LockSource_AutoReLock 1 "触发自动闭锁回防请求闭锁；" 0 "未激活回防请求闭锁；";
+VAL_ 2566875236 LockSource_PkeLock 3 "PKE_UnlockDriver；" 2 "PKE_LockReq；" 1 "PKE_UnlockReq；" 0 "No Action；";
+VAL_ 2566875236 LockSource_CrashLock 1 "CrashReqUnlock；" 0 "No Action；";
+VAL_ 2566875236 LockSource_DKMLock 5 "Reserved；" 4 "DKM_ReqLamp Inspection（灯光巡检识别码）；" 3 "DKM_ReqSearching Car（寻车识别码）；" 2 "DKM_ReqLock（闭锁识别码）；" 1 "DKM_ReqUnlock（解锁识别码）；" 0 "No Action；";
+VAL_ 2566875236 LockSource_Insd_Outd 5 "Reserved；" 4 "车辆外部闭锁命令" 3 "车辆外部解锁命令" 2 "车辆内部闭锁命令" 1 "车辆内部解锁命令" 0 "No Action；";
+VAL_ 2566875236 Lock_Unlock_SucessFb 2 "成功闭锁；" 1 "成功解锁；" 0 "无请求；";
+VAL_ 2566875236 PlayPrevnSts_LPKE_Unlock 1 "主驾解锁进入防玩模式" 0 "主驾解锁未进入防玩模式";
+VAL_ 2566875236 PlayPrevnSts_LPKE_Lock 1 "主驾闭锁进入防玩模式" 0 "主驾闭锁未进入防玩模式";
+VAL_ 2566875236 PlayPrevnSts_RPKE_Unlock 1 "副驾解锁进入防玩模式" 0 "副驾解锁未进入防玩模式";
+VAL_ 2566875236 PlayPrevnSts_RPKE_Lock 1 "副驾闭锁进入防玩模式" 0 "副驾闭锁未进入防玩模式";
+VAL_ 2566875236 CentralLockSw 3 "Not Used；" 2 "Unlock；" 1 "Lock；" 0 "Off；";
+VAL_ 2566875236 AutoUnlockReq 1 "AutoUnlockReqUnlock；" 0 "No Action；";
+VAL_ 2566875236 SpeedReqLock 1 "ReqLock；" 0 "Not Request；";
+VAL_ 2566875236 LockUnlockReq_L 3 "not used；" 2 "unlock；" 1 "lock；" 0 "off；";
+VAL_ 2566875236 LockUnlockReq_R 3 "not used；" 2 "unlock；" 1 "lock；" 0 "off；";
+VAL_ 2566875236 LockOverheatProtection_L 1 "主驾门锁电机过热；" 0 "主驾门锁电机正常；";
+VAL_ 2566875236 LockOverheatProtection_R 1 "副驾门锁电机过热；" 0 "副驾门锁电机正常；";
+VAL_ 2566875236 PlayPrevnSts_LPKE 3 "reserve" 2 "Error" 1 "主驾进入防玩模式" 0 "主驾未进入防玩模式";
+VAL_ 2566875236 PlayPrevnSts_RPKE 3 "reserve" 2 "Error" 1 "副驾进入防玩模式" 0 "副驾未进入防玩模式";
+VAL_ 2566875236 RearFogLightSts 1 "Lamp On" 0 "Lamp Off";
+VAL_ 2566875236 RearFogLightFltMode 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566875236 RearFogLightSts_T 1 "Lamp On" 0 "Lamp Off";
+VAL_ 2566875236 RearFogLightFltMode_T 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566875236 ExtrMirrHozlAdjMotorSts_R 4 "reserve" 2 "Block" 1 "Error" 0 "No Error";
+VAL_ 2566875236 ExtrMirrVertAdjMotorSts_R 5 "reserve" 2 "Block" 1 "Error" 0 "No Error";
+VAL_ 2566875236 ExtrMirrHozlAdjMotorSts_L 6 "reserve" 2 "Block" 1 "Error" 0 "No Error";
+VAL_ 2566875236 ExtrMirrVertAdjMotorSts_L 7 "reserve" 2 "Block" 1 "Error" 0 "No Error";
+VAL_ 2566875236 MainBrkLightSts 2 "Lamp Flash" 1 "Lamp On" 0 "Lamp Off";
+VAL_ 2566875236 TrailerBrkLightSts 2 "Lamp Flash" 1 "Lamp On" 0 "Lamp Off";
+VAL_ 2566875236 MainBrkLightFltMode 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566875236 TrailerBrkLightFltMode 3 "Underloading" 2 "Breaking" 1 "Short out" 0 "Normal";
+VAL_ 2566900119 IVI_HornShiftSwitch 3 "Reserved" 2 "ElecHorn Enable" 1 "AirHorn Enable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_VehLockRemindSet 3 "Reserved" 2 "Light and Horn" 1 "Light" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_LampFollowMeHomeSet 4 "90s" 3 "60s" 2 "30s" 1 "OFF" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_LampAwayHomeSet 4 "90s" 3 "60s" 2 "30s" 1 "OFF" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_FindMyCarSet 3 "Reserved" 2 "Light and Horn" 1 "Light" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_SmartWelcomeSet 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_LogoLightSwitch 3 "Res" 2 "OFF" 1 "ON" 0 "Initial";
+VAL_ 2566900119 IVI_ADBSwitch 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_RainAutoCloseWinSet 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_LockAutoCloseWinSet 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_UnlockSet 2 "All Doors Unlock" 1 "Driver Door Unlock" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_SpeedAutoLockSet 3 "Enable 8km/h" 2 "Enable 15km/h" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_StopAutoUnlockSet 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_ApproachAutoUnlockSet 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_AwayAutoLockSet 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_SpeedLimitSet_Sleeper 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_PDMMaxOpeningSet 3 "90°" 2 "85°" 1 "80°" 0 "Not Req";
+VAL_ 2566900119 IVI_PDMOpenSoundSet 2 "ON" 1 "OFF" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_PDMOpenSpeedSet 3 "Slow" 2 "Middle" 1 "Fast" 0 "Not Req";
+VAL_ 2566900119 IVI_WCMEnableSwitch 3 "Reserved" 2 "OFF" 1 "ON(Default)" 0 "No Operation";
+VAL_ 2566900119 IVI_LockSetReq 3 "Reserved" 2 "Reserved" 1 "Lock" 0 "Not Req";
+VAL_ 2566900119 IVI_BackLightBriSet 10 "100%" 9 "90%" 8 "80%" 7 "70%" 6 "60%" 5 "50%" 4 "40%" 3 "30%" 2 "20%" 1 "10%" 0 "Not Request";
+VAL_ 2566900119 CeilingLightSet 2 "ON" 1 "OFF" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_VoiceCtrlFlag_Body2 1 "Active" 0 "Inactive";
+VAL_ 2566900119 IVI_VSPOpenSet 3 "Reserved" 2 "ON" 1 "OFF" 0 "No Req/Initial";
+VAL_ 2566900119 IVI_DomeLightSwt 3 "Reserved" 2 "ON" 1 "OFF" 0 "No Req";
+VAL_ 2566900119 IVI_DomeLightSwt_R 3 "Reserved" 2 "ON" 1 "OFF" 0 "No Req";
+VAL_ 2566900119 IVI_DomeLightSwt_Door 3 "Reserved" 2 "ON" 1 "OFF" 0 "No Req";
+VAL_ 2566900371 LOG_LogoLightSet_Sts 3 "Res" 2 "OFF" 1 "ON" 0 "Initial";
+VAL_ 2566900372 HLCM_M_Set_Sts 3 "Res" 2 "OFF" 1 "ON" 0 "Initial";
+VAL_ 2565867787 SteerWheelAngleSensorType 3 "NotAvailable" 2 "Reserved" 1 "AbsMeasuringPrinciple" 0 "RelativeMeasuringPrinciple";
+VAL_ 2566872611 RLS_RQ_WiperSPD 3 "Not used" 2 "High Speed" 1 "Low Speed" 0 "No wiping";
+VAL_ 2566872611 RLS_RQ_LowBeam 1 "RQ on Low Beam" 0 "No RQ on Low Beam";
+VAL_ 2566872611 RLS_RQ_PositionLamp 1 "RQ on Position Lamp" 0 "No RQ on Position Lamp";
+VAL_ 2566872611 RLS_Fault_Rain 1 "Status Fault" 0 "Normal Status";
+VAL_ 2566872611 RLS_Fault_Light 1 "Status Fault" 0 "Normal Status";
+VAL_ 2566872611 RLS_REP_Error 1 "Error" 0 "No error";
+VAL_ 2566872611 RLS_VOLT_Error 3 "Not used" 2 "VOLT_High" 1 "VOLT_Low" 0 "No error";
+VAL_ 2566872611 RLS_RainCloseWin_Str 1 "关窗" 0 "不关窗";
+VAL_ 2566872611 RLS_WiperSPD_FuncErr 3 "预留。" 2 "潜伏故障；" 1 "单点故障（含开关采集类故障、逻辑处理类故障、通讯类故障、驱动类故障等直接影响了功能表现行为的故障）；" 0 "正常；";
+VAL_ 2566872611 RLS_RQ_LowBeam_FuncErr 3 "预留。" 2 "潜伏故障；" 1 "单点故障（含开关采集类故障、逻辑处理类故障、通讯类故障、驱动类故障等直接影响了功能表现行为的故障）；" 0 "正常；";
+VAL_ 2566859752 LowBeamSwRq 3 "notused" 2 "reserved" 1 "on" 0 "off";
+VAL_ 2566859752 HighBeamSwRq 3 "notused" 2 "reserved" 1 "on" 0 "off";
+VAL_ 2566859752 FCW_Switch_Fdk 3 "notused" 2 "reserved" 1 "on" 0 "off";
+VAL_ 2566859752 FCW_Sensitivity_Fdk 3 "notused" 2 "Far" 1 "Miedium" 0 "Near";
+VAL_ 2566859752 LDW_Switch_Fdk 3 "notused" 2 "reserved" 1 "on" 0 "off";
+VAL_ 2566859752 LDW_Sensitivity_Fdk 3 "notused" 2 "High" 1 "Miedium" 0 "Low";
+VAL_ 2566859752 IHBC_Status 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "Permanent:Error" 3 "Temporary:Error" 2 "Active" 1 "Standby" 0 "OFF";
+VAL_ 2566859752 SLI_Status 3 "reserved" 2 "SLIfailure" 1 "VisionOnlyMode" 0 "Off";
+VAL_ 2566859752 SLIF_Status 3 "reserved" 2 "SLIFfailure" 1 "VisionOnlyModeandwarning" 0 "Off";
+VAL_ 2566859752 SLIF_Warning 1 "Warning" 0 "No:Warning";
+VAL_ 2566859752 Sign_Speedlimit 12 "120" 11 "110" 10 "100" 9 "90" 8 "80" 7 "70" 6 "60" 5 "50" 4 "40" 3 "30" 2 "20" 1 "10" 0 "Nodisplay";
+VAL_ 2566859752 Sign_SpeedLimitCancelled 1 "Speed:Limit:Canceled" 0 "Speed:Limit";
+VAL_ 2566878624 FCS_01_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566878624 FCS_01_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566878624 FCS_01_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566878880 FCS_02_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566878880 FCS_02_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566878880 FCS_02_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566879136 FCS_03_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566879136 FCS_03_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566879136 FCS_03_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566879392 FCS_04_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566879392 FCS_04_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566879392 FCS_04_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566879648 FCS_05_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566879648 FCS_05_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566879648 FCS_05_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566879904 FCS_06_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566879904 FCS_06_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566879904 FCS_06_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566880160 FCS_07_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566880160 FCS_07_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566880160 FCS_07_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566880416 FCS_08_Obj_Motion_Category 15 "Reserved" 14 "Reserved" 13 "ONCOMING" 12 "PRECEEDING" 11 "MOVING" 10 "RTAP" 9 "LTAP" 8 "CROSSING" 7 "MOVING_OUT" 6 "MOVING_IN" 5 "CLOSE_CUT_IN" 4 "PASSING_OUT" 3 "PASSING_IN" 2 "PASSING" 1 "UNDEFINED" 0 "UNFILLED";
+VAL_ 2566880416 FCS_08_Obj_Type 255 "Invalid" 7 "Uncertainvehicle" 6 "Conical Barrel" 5 "PasserBy" 4 "Moto" 3 "Bicycle" 2 "Truck" 1 "Car" 0 "None";
+VAL_ 2566880416 FCS_08_Obj_MeasFlag 1 "OBJECT_EXTRAPOLATED_THIS_CYCLE" 0 "OBJECT_MEASURED_INTHIS_CYCLE";
+VAL_ 2566869400 ADB_L_SwitchSet_Sts 2 "Enable" 1 "Disable" 0 "No Req/Initial";
+VAL_ 2566869657 ADB_R_SwitchSet_Sts 2 "Enable" 1 "Disable" 0 "No Req/Initial";

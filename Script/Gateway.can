@@ -1,0 +1,73 @@
+/*@!Encoding:936*/
+/*@!Encoding:936*/
+includes
+{
+
+}
+
+variables
+{ 
+
+}
+
+/**
+ * @brief 将收到的J1939 Multi-PG中的C-PG解析为PG并发送到其它通道
+ * 
+ * @param Multi_PG 收到的Multi-PG帧，注意是CANFD扩展帧
+ * @param chOffset 发送到其它通道相对于此Multi-PG通道的偏移量，例如Multi-PG的通道为2，chOffset为3，则发出pg的通道就是5
+ * 
+ * @note
+ * 1. 注意现在这个程序只能解析CANFD扩展帧
+ * 2. 参数chOffset不能为负数
+ * 3. 发出的通道最好设为虚拟通道,这样效率更高，并且不会产生错误帧
+ */
+on message *
+{
+  message 0x0 temp;
+  byte Target_Channel = 2;
+  byte Source_Channel = 1;
+  if(this.can == Source_Channel)
+  {
+    if(!(this.msgflags & 0x40))
+    {
+      temp = this;
+      temp.id = this.id;
+      temp.can = Target_Channel;
+//      write("ch = %d, MsgFlags = %1X",this.can,this.MsgFlags);
+      if(temp.id == 0x00)
+      {
+        //这里面写某个ID的报文需要处理的逻辑
+      }
+      output(temp);
+    }
+  }
+  if(this.can == Target_Channel)
+  {
+    if(!(this.msgflags & 0x40))
+    {
+      temp = this;
+      temp.id = this.id;
+      temp.can = Source_Channel;
+//      write("ch = %d, MsgFlags = %1X",this.can,this.MsgFlags);
+      if(temp.id == 0x00)
+      {
+        //这里面写某个ID的报文需要处理的逻辑
+      }
+      output(temp);
+    }
+  }
+  
+}
+
+MainTest()
+{
+//  char mapPath[0x3ff];  //文件路径
+//  dword temp[2];
+//  sysGetVariableString("FilePath","MappingTable",mapPath,elcount(mapPath));
+//  ReadMapFromCSV(mapPath);  //从CSV文件中读取映射表
+//  temp[1] = findMapping_Unpack(0x1C25FF97,0xffdd);
+//  write("%X",temp[1]);
+//  temp[1] = findMapping_Pack(0x18FFDD97,temp);
+//  write("%X,%X",temp[1],temp[0]);
+  testWaitForTimeout(0);
+}

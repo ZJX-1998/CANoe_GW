@@ -1,0 +1,459 @@
+/*************************************************************************************/
+
+//                                                                                     
+
+// Description: LIN Description file created using VDE						            
+
+// Created:     04/18/2025 13:58:58
+
+// Author:      VDE
+
+//                                                                                     
+
+/*************************************************************************************/
+
+LIN_description_file;
+LIN_protocol_version = "2.1";
+LIN_language_version = "2.1";
+LIN_speed = 19.2 kbps;
+
+Nodes {
+  Master: VDCU, 10 ms, 0.1 ms ;
+  Slaves: Chiller_1, WAY3_1, WAY4 ;
+}
+
+Signals {
+  Chiller1_EXV_Cmd_Set_Rq: 16, 0, VDCU, Chiller_1;//Positon Request (0~576):phys=raw halfstep 0x240~0xFFFF:not defined
+  Chiller1_EXV_Cmd_Move_Enbl: 1, 0, VDCU, Chiller_1;//Move Enable
+  Chiller1_EXV_Cmd_Init_Rq: 3, 0, VDCU, Chiller_1;//Initialization Request
+  Chiller1_RsErr_EXV: 1, 0, Chiller_1, VDCU;//Communication Error Status
+  Chiller1_EXV_curInit_Stat: 2, 0, Chiller_1, VDCU;//Initialization Status
+  Chiller1_EXV_Run_Stat: 1, 0, Chiller_1, VDCU;//Run Status
+  Chiller1_EXV_Fault_Stat: 4, 0, Chiller_1, VDCU;//Fault Status
+  Chiller1_EXV_Volt_Stat: 2, 0, Chiller_1, VDCU;//Voltage Status
+  Chiller1_EXV_OvrTemp_Warn: 2, 0, Chiller_1, VDCU;//Temperature Status
+  Chiller1_EXV_Pos: 16, 0, Chiller_1, VDCU;//Current Position (0~576):phys=raw halfstep 0x240~0xFFFF:not defined
+  TWV1_PosSetReq: 8, 0, VDCU, WAY3_1;//位置请求
+  TWV1_MoveEnable: 1, 0, VDCU, WAY3_1;//使能
+  TWV1_AngSenSts: 2, 0, WAY3_1, VDCU;//角度传感器状态
+  TWV1_TempSts: 2, 0, WAY3_1, VDCU;//温度状态
+  TWV1_VoltSts: 2, 0, WAY3_1, VDCU;//电压状态
+  TWV1_MotSts: 2, 0, WAY3_1, VDCU;//电机状态
+  TWV1_PosRes: 8, 0, WAY3_1, VDCU;//位置反馈
+  TWV1_RunSts: 1, 0, WAY3_1, VDCU;//电机运行状态
+  TWV1_BlkSts: 1, 0, WAY3_1, VDCU;//堵转状态
+  TWV1_TimeOut: 1, 0, WAY3_1, VDCU;//运行超时
+  TWV1_CmdPosErr: 1, 0, WAY3_1, VDCU;//位置发送错误状态
+  TWV1_ErrResp: 1, 0, WAY3_1, VDCU;//通讯状态
+  FWV1_PosSetReq: 8, 0, VDCU, WAY4;//位置请求
+  FWV1_MoveEnable: 1, 0, VDCU, WAY4;//使能
+  FWV1_AngSenSts: 2, 0, WAY4, VDCU;//角度传感器状态
+  FWV1_TempSts: 2, 0, WAY4, VDCU;//温度状态
+  FWV1_VoltSts: 2, 0, WAY4, VDCU;//电压状态
+  FWV1_MotSts: 2, 0, WAY4, VDCU;//电机状态
+  FWV1_PosRes: 8, 0, WAY4, VDCU;//位置反馈
+  FWV1_RunSts: 1, 0, WAY4, VDCU;//电机运行状态
+  FWV1_BlkSts: 1, 0, WAY4, VDCU;//堵转状态
+  FWV1_TimeOut: 1, 0, WAY4, VDCU;//运行超时
+  FWV1_CmdPosErr: 1, 0, WAY4, VDCU;//位置发送错误状态
+  FWV1_ErrResp: 1, 0, WAY4, VDCU;//通讯状态
+}
+
+Diagnostic_signals {
+  MasterReqB0: 8, 0 ;
+  MasterReqB1: 8, 0 ;
+  MasterReqB2: 8, 0 ;
+  MasterReqB3: 8, 0 ;
+  MasterReqB4: 8, 0 ;
+  MasterReqB5: 8, 0 ;
+  MasterReqB6: 8, 0 ;
+  MasterReqB7: 8, 0 ;
+  SlaveRespB0: 8, 0 ;
+  SlaveRespB1: 8, 0 ;
+  SlaveRespB2: 8, 0 ;
+  SlaveRespB3: 8, 0 ;
+  SlaveRespB4: 8, 0 ;
+  SlaveRespB5: 8, 0 ;
+  SlaveRespB6: 8, 0 ;
+  SlaveRespB7: 8, 0 ;
+}
+Frames {
+  EXVCtrl_Chiller1: 0x22, VDCU, 8 {
+    Chiller1_EXV_Cmd_Set_Rq, 0 ;
+    Chiller1_EXV_Cmd_Move_Enbl, 16 ;
+    Chiller1_EXV_Cmd_Init_Rq, 24 ;
+  }
+  EXVSts_Chiller1: 0x2B, Chiller_1, 8 {
+    Chiller1_RsErr_EXV, 0 ;
+    Chiller1_EXV_curInit_Stat, 2 ;
+    Chiller1_EXV_Run_Stat, 4 ;
+    Chiller1_EXV_Fault_Stat, 8 ;
+    Chiller1_EXV_Volt_Stat, 12 ;
+    Chiller1_EXV_OvrTemp_Warn, 14 ;
+    Chiller1_EXV_Pos, 16 ;
+  }
+  TWV1_Cmd: 0x8, VDCU, 8 {
+    TWV1_PosSetReq, 32 ;
+    TWV1_MoveEnable, 41 ;
+  }
+  TWV1_Sts: 0x28, WAY3_1, 8 {
+    TWV1_AngSenSts, 0 ;
+    TWV1_TempSts, 2 ;
+    TWV1_VoltSts, 4 ;
+    TWV1_MotSts, 6 ;
+    TWV1_PosRes, 8 ;
+    TWV1_RunSts, 24 ;
+    TWV1_BlkSts, 25 ;
+    TWV1_TimeOut, 26 ;
+    TWV1_CmdPosErr, 27 ;
+    TWV1_ErrResp, 32 ;
+  }
+  FWV_Cmd: 0x9, VDCU, 8 {
+    FWV1_PosSetReq, 32 ;
+    FWV1_MoveEnable, 41 ;
+  }
+  FWV_Sts: 0x29, WAY4, 8 {
+    FWV1_AngSenSts, 0 ;
+    FWV1_TempSts, 2 ;
+    FWV1_VoltSts, 4 ;
+    FWV1_MotSts, 6 ;
+    FWV1_PosRes, 8 ;
+    FWV1_RunSts, 24 ;
+    FWV1_BlkSts, 25 ;
+    FWV1_TimeOut, 26 ;
+    FWV1_CmdPosErr, 27 ;
+    FWV1_ErrResp, 32 ;
+  }
+}
+
+Diagnostic_frames {
+  MasterReq: 0x3c {
+    MasterReqB0, 0 ;
+    MasterReqB1, 8 ;
+    MasterReqB2, 16 ;
+    MasterReqB3, 24 ;
+    MasterReqB4, 32 ;
+    MasterReqB5, 40 ;
+    MasterReqB6, 48 ;
+    MasterReqB7, 56 ;
+  }
+  SlaveResp: 0x3d {
+    SlaveRespB0, 0 ;
+    SlaveRespB1, 8 ;
+    SlaveRespB2, 16 ;
+    SlaveRespB3, 24 ;
+    SlaveRespB4, 32 ;
+    SlaveRespB5, 40 ;
+    SlaveRespB6, 48 ;
+    SlaveRespB7, 56 ;
+  }
+}
+Node_attributes {
+  Chiller_1{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 43 ;
+    initial_NAD = 43 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = Chiller1_RsErr_EXV ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      EXVSts_Chiller1 ;
+      EXVCtrl_Chiller1 ;
+    }
+  }
+  WAY3_1{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 40 ;
+    initial_NAD = 40 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = TWV1_ErrResp ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      TWV1_Sts ;
+      TWV1_Cmd ;
+    }
+  }
+  WAY4{
+    LIN_protocol = "2.1" ;
+    configured_NAD = 41 ;
+    initial_NAD = 41 ;
+    product_id = 0x0, 0x0, 0 ;
+    response_error = FWV1_ErrResp ;
+    P2_min = 50 ms ;
+    ST_min = 0 ms ;
+    N_As_timeout = 1000 ms ;
+    N_Cr_timeout = 1000 ms ;
+    configurable_frames {
+      FWV_Sts ;
+      FWV_Cmd ;
+    }
+  }
+}
+
+Schedule_tables {
+ Beacon_LIN1 {
+    EXVCtrl_Chiller1 delay 10 ms ;
+    EXVSts_Chiller1 delay 10 ms ;
+    TWV1_Cmd delay 10 ms ;
+    TWV1_Sts delay 10 ms ;
+    FWV_Cmd delay 10 ms ;
+    FWV_Sts delay 50 ms ;
+  }
+}
+
+Signal_encoding_types {
+  Enc_EXVCtrl_Chiller1_Chiller1_EXV_Cmd_Set_Rq {
+    physical_value, 0, 576, 1, 0 ;
+  }
+  Enc_EXVCtrl_Chiller1_Chiller1_EXV_Cmd_Move_Enbl {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Ignore Commanded Position" ;
+    logical_value, 1, "Move to Commanded Position" ;
+  }
+  Enc_EXVCtrl_Chiller1_Chiller1_EXV_Cmd_Init_Rq {
+    physical_value, 0, 7, 1, 0 ;
+    logical_value, 0, "No Request" ;
+    logical_value, 1, "start Init-Sequence" ;
+    logical_value, 2, "waiting for Sequence to finish" ;
+    logical_value, 3, "not defined" ;
+    logical_value, 4, "not defined" ;
+    logical_value, 5, "not defined" ;
+    logical_value, 6, "not defined" ;
+    logical_value, 7, "not defined" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_RsErr_EXV {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Comm Error" ;
+    logical_value, 1, "Comm Error detected" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_EXV_curInit_Stat {
+    physical_value, 0, 3, 1, 0, "0x3" ;
+    logical_value, 0, "Not Initialized" ;
+    logical_value, 1, "Initialization in Process" ;
+    logical_value, 2, "Initialized" ;
+    logical_value, 3, "Invalid" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Run_Stat {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Actuator is not moving" ;
+    logical_value, 1, "Actuator is moving" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Fault_Stat {
+    physical_value, 0, 15, 1, 0 ;
+    logical_value, 0, "Actuator Not Faulted" ;
+    logical_value, 1, "Motor-Coil shorted" ;
+    logical_value, 2, "Motor-Coil open load" ;
+    logical_value, 3, "Over temperature shutdown" ;
+    logical_value, 4, "not defined" ;
+    logical_value, 5, "Motor_Stall" ;
+    logical_value, 6, "not defined" ;
+    logical_value, 7, "not defined" ;
+    logical_value, 8, "not defined" ;
+    logical_value, 9, "not defined" ;
+    logical_value, 10, "not defined" ;
+    logical_value, 11, "not defined" ;
+    logical_value, 12, "not defined" ;
+    logical_value, 13, "not defined" ;
+    logical_value, 14, "not defined" ;
+    logical_value, 15, "not defined" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Volt_Stat {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Voltage Range ok" ;
+    logical_value, 1, "Overvoltage" ;
+    logical_value, 2, "Under voltage" ;
+    logical_value, 3, "Not defined" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_EXV_OvrTemp_Warn {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Ok" ;
+    logical_value, 1, "High Temperature Warning" ;
+    logical_value, 2, "not defined" ;
+    logical_value, 3, "not defined" ;
+  }
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Pos {
+    physical_value, 0, 576, 1, 0 ;
+  }
+  Enc_TWV1_Cmd_TWV1_PosSetReq {
+    physical_value, 0, 255, 1, 0, "%" ;
+    logical_value, 0, "moveto0%；" ;
+    logical_value, 50, "moveto50%；" ;
+    logical_value, 100, "moveto100%；" ;
+  }
+  Enc_TWV1_Cmd_TWV1_MoveEnable {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Enable" ;
+    logical_value, 1, "Enable" ;
+  }
+  Enc_TWV1_Sts_TWV1_AngSenSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "No Error;" ;
+    logical_value, 1, "Error" ;
+    logical_value, 2, "Reserved" ;
+    logical_value, 3, "Reserved" ;
+  }
+  Enc_TWV1_Sts_TWV1_TempSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Temp Ok;" ;
+    logical_value, 1, "Over Temp Warning;" ;
+    logical_value, 2, "Over Temp;" ;
+    logical_value, 3, "Low Temp;" ;
+  }
+  Enc_TWV1_Sts_TWV1_VoltSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Volt OK;" ;
+    logical_value, 1, "Over Volt;" ;
+    logical_value, 2, "Under Volt;" ;
+    logical_value, 3, "Reserved;" ;
+  }
+  Enc_TWV1_Sts_TWV1_MotSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Mot Open" ;
+    logical_value, 2, "Mot Over Current" ;
+    logical_value, 3, "Reserved" ;
+  }
+  Enc_TWV1_Sts_TWV1_PosRes {
+    physical_value, 0, 255, 1, 0, "%" ;
+    logical_value, 0, "moveto0%；" ;
+    logical_value, 50, "moveto50%；" ;
+    logical_value, 100, "moveto100%；" ;
+  }
+  Enc_TWV1_Sts_TWV1_RunSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Move;" ;
+    logical_value, 1, "Moving;" ;
+  }
+  Enc_TWV1_Sts_TWV1_BlkSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error;" ;
+    logical_value, 1, "Block_Err;" ;
+  }
+  Enc_TWV1_Sts_TWV1_TimeOut {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Time Out" ;
+  }
+  Enc_TWV1_Sts_TWV1_CmdPosErr {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error;" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_TWV1_Sts_TWV1_ErrResp {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_FWV_Cmd_FWV1_PosSetReq {
+    physical_value, 0, 255, 1, 0, "%" ;
+    logical_value, 0, "0%（2-3,1-4）" ;
+    logical_value, 100, "100%（2-1,3-4）" ;
+  }
+  Enc_FWV_Cmd_FWV1_MoveEnable {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Enable" ;
+    logical_value, 1, "Enable" ;
+  }
+  Enc_FWV_Sts_FWV1_AngSenSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "No Error;" ;
+    logical_value, 1, "Error" ;
+    logical_value, 2, "Reserved" ;
+    logical_value, 3, "Reserved" ;
+  }
+  Enc_FWV_Sts_FWV1_TempSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Temp Ok;" ;
+    logical_value, 1, "Over Temp Warning;" ;
+    logical_value, 2, "Over Temp;" ;
+    logical_value, 3, "Low Temp;" ;
+  }
+  Enc_FWV_Sts_FWV1_VoltSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "Volt OK;" ;
+    logical_value, 1, "Over Volt;" ;
+    logical_value, 2, "Under Volt;" ;
+    logical_value, 3, "Reserved;" ;
+  }
+  Enc_FWV_Sts_FWV1_MotSts {
+    physical_value, 0, 3, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Mot Open" ;
+    logical_value, 2, "Mot Over Current" ;
+    logical_value, 3, "Reserved" ;
+  }
+  Enc_FWV_Sts_FWV1_PosRes {
+    physical_value, 0, 255, 1, 0, "%" ;
+    logical_value, 0, "0%（2-3,1-4）" ;
+    logical_value, 100, "100%（2-1,3-4）" ;
+  }
+  Enc_FWV_Sts_FWV1_RunSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "Not Move;" ;
+    logical_value, 1, "Moving;" ;
+  }
+  Enc_FWV_Sts_FWV1_BlkSts {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error;" ;
+    logical_value, 1, "Block_Err;" ;
+  }
+  Enc_FWV_Sts_FWV1_TimeOut {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Time Out" ;
+  }
+  Enc_FWV_Sts_FWV1_CmdPosErr {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error;" ;
+    logical_value, 1, "Error" ;
+  }
+  Enc_FWV_Sts_FWV1_ErrResp {
+    physical_value, 0, 1, 1, 0 ;
+    logical_value, 0, "No Error" ;
+    logical_value, 1, "Error" ;
+  }
+}
+
+Signal_representation {
+  Enc_EXVCtrl_Chiller1_Chiller1_EXV_Cmd_Set_Rq: Chiller1_EXV_Cmd_Set_Rq ;
+  Enc_EXVCtrl_Chiller1_Chiller1_EXV_Cmd_Move_Enbl: Chiller1_EXV_Cmd_Move_Enbl ;
+  Enc_EXVCtrl_Chiller1_Chiller1_EXV_Cmd_Init_Rq: Chiller1_EXV_Cmd_Init_Rq ;
+  Enc_EXVSts_Chiller1_Chiller1_RsErr_EXV: Chiller1_RsErr_EXV ;
+  Enc_EXVSts_Chiller1_Chiller1_EXV_curInit_Stat: Chiller1_EXV_curInit_Stat ;
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Run_Stat: Chiller1_EXV_Run_Stat ;
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Fault_Stat: Chiller1_EXV_Fault_Stat ;
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Volt_Stat: Chiller1_EXV_Volt_Stat ;
+  Enc_EXVSts_Chiller1_Chiller1_EXV_OvrTemp_Warn: Chiller1_EXV_OvrTemp_Warn ;
+  Enc_EXVSts_Chiller1_Chiller1_EXV_Pos: Chiller1_EXV_Pos ;
+  Enc_TWV1_Cmd_TWV1_PosSetReq: TWV1_PosSetReq ;
+  Enc_TWV1_Cmd_TWV1_MoveEnable: TWV1_MoveEnable ;
+  Enc_TWV1_Sts_TWV1_AngSenSts: TWV1_AngSenSts ;
+  Enc_TWV1_Sts_TWV1_TempSts: TWV1_TempSts ;
+  Enc_TWV1_Sts_TWV1_VoltSts: TWV1_VoltSts ;
+  Enc_TWV1_Sts_TWV1_MotSts: TWV1_MotSts ;
+  Enc_TWV1_Sts_TWV1_PosRes: TWV1_PosRes ;
+  Enc_TWV1_Sts_TWV1_RunSts: TWV1_RunSts ;
+  Enc_TWV1_Sts_TWV1_BlkSts: TWV1_BlkSts ;
+  Enc_TWV1_Sts_TWV1_TimeOut: TWV1_TimeOut ;
+  Enc_TWV1_Sts_TWV1_CmdPosErr: TWV1_CmdPosErr ;
+  Enc_TWV1_Sts_TWV1_ErrResp: TWV1_ErrResp ;
+  Enc_FWV_Cmd_FWV1_PosSetReq: FWV1_PosSetReq ;
+  Enc_FWV_Cmd_FWV1_MoveEnable: FWV1_MoveEnable ;
+  Enc_FWV_Sts_FWV1_AngSenSts: FWV1_AngSenSts ;
+  Enc_FWV_Sts_FWV1_TempSts: FWV1_TempSts ;
+  Enc_FWV_Sts_FWV1_VoltSts: FWV1_VoltSts ;
+  Enc_FWV_Sts_FWV1_MotSts: FWV1_MotSts ;
+  Enc_FWV_Sts_FWV1_PosRes: FWV1_PosRes ;
+  Enc_FWV_Sts_FWV1_RunSts: FWV1_RunSts ;
+  Enc_FWV_Sts_FWV1_BlkSts: FWV1_BlkSts ;
+  Enc_FWV_Sts_FWV1_TimeOut: FWV1_TimeOut ;
+  Enc_FWV_Sts_FWV1_CmdPosErr: FWV1_CmdPosErr ;
+  Enc_FWV_Sts_FWV1_ErrResp: FWV1_ErrResp ;
+}
+
